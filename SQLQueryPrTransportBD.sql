@@ -110,11 +110,3 @@ CREATE TABLE Statie (
 );
 GO
 
-
-INSERT INTO Persoana (nume, prenume, CNP, adresa, tip_persoana)
-VALUES ('Popescu', 'Ion', '1234567890123', 'Strada Libertății, nr. 10', 1);
-
-SELECT * FROM Tip_User;
-
-INSERT INTO Tip_User (nume) VALUES ('Calator');
-INSERT INTO Tip_User (nume) VALUES ('Sofer');
