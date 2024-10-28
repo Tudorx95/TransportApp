@@ -1,28 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace WpfApp
 {
-    /// <summary>
-    /// Interaction logic for Search.xaml
-    /// </summary>
     public partial class Search : UserControl
     {
         public Search()
         {
             InitializeComponent();
+        }
+
+        private void SearchTextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            // Hide the placeholder text when the textbox is focused
+            PlaceholderTextBlock.Visibility = Visibility.Collapsed;
+        }
+
+        private void SearchTextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            // Show the placeholder text again if the textbox is empty
+            if (string.IsNullOrWhiteSpace(SearchTextBox.Text))
+            {
+                PlaceholderTextBlock.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void SearchButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Implement your search logic here
+            MessageBox.Show($"Searching for: {SearchTextBox.Text}");
         }
     }
 }

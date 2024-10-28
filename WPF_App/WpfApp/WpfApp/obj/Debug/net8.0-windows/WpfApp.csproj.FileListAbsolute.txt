@@ -28,3 +28,33 @@ C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WPF_App\Wpf
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\Home.g.cs
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\Home.baml
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\NavigationBar.baml
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\Search.baml
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\Home.g.cs
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\Login.g.cs
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\NavigationBar.g.cs
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\Search.g.cs
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\WpfApp_MarkupCompile.cache
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\WpfApp_MarkupCompile.lref
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\WpfApp.dll
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\refint\WpfApp.dll
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\WpfApp.pdb
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\bin\Debug\net8.0-windows\WpfApp.exe
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\bin\Debug\net8.0-windows\WpfApp.deps.json
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\bin\Debug\net8.0-windows\WpfApp.runtimeconfig.json
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\bin\Debug\net8.0-windows\WpfApp.dll
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\bin\Debug\net8.0-windows\WpfApp.pdb
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\Home.baml
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\Login.baml
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\WpfApp.g.resources
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\WpfApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\WpfApp.AssemblyInfoInputs.cache
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\WpfApp.AssemblyInfo.cs
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\WpfApp.csproj.CoreCompileInputs.cache
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\WpfApp.sourcelink.json
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\WpfApp.genruntimeconfig.cache
+C:\Users\razva\Desktop\git\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\ref\WpfApp.dll
