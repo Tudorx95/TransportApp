@@ -23,3 +23,6 @@ C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WPF_App\Wpf
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\Search.g.cs
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\Login.baml
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\Search.baml
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\NavigationBar.baml
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\NavigationBar.g.cs
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WPF_App\WpfApp\WpfApp\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
