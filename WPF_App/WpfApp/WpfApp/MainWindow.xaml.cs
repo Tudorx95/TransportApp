@@ -10,24 +10,8 @@ namespace WpfApp
         {
             InitializeComponent();
             this.WindowState = WindowState.Maximized; // Maximize the window
+            MainContent.Content = new Home();
         }
 
-        private void HomeButton_Click(object sender, RoutedEventArgs e)
-        {
-            //MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
-            //mainWindow.MainContent.Content = new MainWindow();
-        }
-
-        private void LoginButton_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow.MainContent.Content = new LoginView();
-        }
-
-        private void SearchButton_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow.MainContent.Content = new SearchTransportView();
-        }
     }
 }

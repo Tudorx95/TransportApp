@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using WpfApp.Components;
 
 namespace WpfApp
 {
@@ -38,8 +39,10 @@ namespace WpfApp
             string username = UsernameTextBox.Text;
             string password = PasswordBox.Password;
 
-            // Add your login logic here
-            MessageBox.Show($"Login clicked for {username}");
+            string encryptedPassword = Crypt.Encrypt(password);
+            // verify the integrity of the password
+            
+            //MessageBox.Show($"Login clicked for {username} with encrypted password: {encryptedPassword}");
         }
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)

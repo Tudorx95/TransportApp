@@ -13,8 +13,8 @@ namespace WpfApp
         private void HomeButton_Click(object sender, RoutedEventArgs e)
         {
             // Logic to navigate to Home Window
-            //MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
-            //mainWindow.MainContent.Content = new MainWindow(); 
+            MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow.MainContent.Content = new Home(); 
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
