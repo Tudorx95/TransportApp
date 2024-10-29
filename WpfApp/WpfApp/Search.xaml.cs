@@ -10,20 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfApp
 {
     /// <summary>
-    /// Interaction logic for Home.xaml
+    /// Interaction logic for Search.xaml
     /// </summary>
-    public partial class Home : UserControl
+    public partial class Search : UserControl
     {
-        public Home()
+        public Search()
         {
             InitializeComponent();
         }
-
-
     }
 }
