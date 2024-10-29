@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WPF_App\\WpfApp\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|c:\\users\\tudor\\onedrive\\atm\\an iii\\sem1\\administrare bd\\transportapp\\wpf_app\\wpfapp\\wpfapp\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -93,6 +94,86 @@
     {
       "AbsoluteMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|c:\\users\\tudor\\onedrive\\atm\\an iii\\sem1\\administrare bd\\transportapp\\wpf_app\\wpfapp\\wpfapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|c:\\users\\razva\\desktop\\git\\transportapp\\wpf_app\\wpfapp\\wpfapp\\search.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\search.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|c:\\users\\razva\\desktop\\git\\transportapp\\wpf_app\\wpfapp\\wpfapp\\search.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\search.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|c:\\users\\razva\\desktop\\git\\transportapp\\wpf_app\\wpfapp\\wpfapp\\search.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\search.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|c:\\users\\razva\\desktop\\git\\transportapp\\wpf_app\\wpfapp\\wpfapp\\components\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\components\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|c:\\users\\razva\\desktop\\git\\transportapp\\wpf_app\\wpfapp\\wpfapp\\components\\mtcs\\tram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\components\\mtcs\\tram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|c:\\users\\razva\\desktop\\git\\transportapp\\wpf_app\\wpfapp\\wpfapp\\wpfapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\wpfapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|c:\\users\\razva\\desktop\\git\\transportapp\\wpf_app\\wpfapp\\wpfapp\\components\\mtcs\\subway.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\components\\mtcs\\subway.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|c:\\users\\razva\\desktop\\git\\transportapp\\wpf_app\\wpfapp\\wpfapp\\components\\mtcs\\bus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\components\\mtcs\\bus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|c:\\users\\razva\\desktop\\git\\transportapp\\wpf_app\\wpfapp\\wpfapp\\components\\route.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\components\\route.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|c:\\users\\razva\\desktop\\git\\transportapp\\wpf_app\\wpfapp\\wpfapp\\components\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\components\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|c:\\users\\razva\\desktop\\git\\transportapp\\wpf_app\\wpfapp\\wpfapp\\components\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\components\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|c:\\users\\razva\\desktop\\git\\transportapp\\wpf_app\\wpfapp\\wpfapp\\components\\mtc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\components\\mtc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|c:\\users\\razva\\desktop\\git\\transportapp\\wpf_app\\wpfapp\\wpfapp\\components\\searchtransportview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\components\\searchtransportview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|c:\\users\\razva\\desktop\\git\\transportapp\\wpf_app\\wpfapp\\wpfapp\\components\\loginview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\components\\loginview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|c:\\users\\razva\\desktop\\git\\transportapp\\wpf_app\\wpfapp\\wpfapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|c:\\users\\razva\\desktop\\git\\transportapp\\wpf_app\\wpfapp\\wpfapp\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|c:\\users\\razva\\desktop\\git\\transportapp\\wpf_app\\wpfapp\\wpfapp\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|c:\\users\\razva\\desktop\\git\\transportapp\\wpf_app\\wpfapp\\wpfapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|c:\\users\\razva\\desktop\\git\\transportapp\\wpf_app\\wpfapp\\wpfapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|c:\\users\\razva\\desktop\\git\\transportapp\\wpf_app\\wpfapp\\wpfapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F1B7E8FE-4A94-4677-B9F0-8F2C0E5B7F68}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+>>>>>>> 5af61f9510656b8176a025a2a05da58039cef24f
     }
   ],
   "DocumentGroupContainers": [
@@ -102,7 +183,11 @@
       "DocumentGroups": [
         {
           "DockedHeight": 308,
+<<<<<<< HEAD
           "SelectedChildIndex": 1,
+=======
+          "SelectedChildIndex": 5,
+>>>>>>> 5af61f9510656b8176a025a2a05da58039cef24f
           "Children": [
             {
               "$type": "Bookmark",
@@ -110,6 +195,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 0,
               "Title": "Login.xaml",
               "DocumentMoniker": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Login.xaml",
@@ -255,6 +341,9 @@
             {
               "$type": "Document",
               "DocumentIndex": 16,
+=======
+              "DocumentIndex": 8,
+>>>>>>> 5af61f9510656b8176a025a2a05da58039cef24f
               "Title": "Route.cs",
               "DocumentMoniker": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Components\\Route.cs",
               "RelativeDocumentMoniker": "WpfApp\\Components\\Route.cs",
@@ -266,7 +355,84 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 19,
+=======
+              "DocumentIndex": 9,
+              "Title": "Ticket.cs",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Components\\Ticket.cs",
+              "RelativeDocumentMoniker": "WpfApp\\Components\\Ticket.cs",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Components\\Ticket.cs",
+              "RelativeToolTip": "WpfApp\\Components\\Ticket.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T16:16:43.96Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Search.xaml",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Search.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\Search.xaml",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Search.xaml",
+              "RelativeToolTip": "WpfApp\\Search.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-28T14:59:32.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Person.cs",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Components\\Person.cs",
+              "RelativeDocumentMoniker": "WpfApp\\Components\\Person.cs",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Components\\Person.cs",
+              "RelativeToolTip": "WpfApp\\Components\\Person.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T16:16:21.862Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Search.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Search.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp\\Search.xaml.cs",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Search.xaml.cs",
+              "RelativeToolTip": "WpfApp\\Search.xaml.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAQwGQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T21:08:16.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Components\\Employee.cs",
+              "RelativeDocumentMoniker": "WpfApp\\Components\\Employee.cs",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Components\\Employee.cs",
+              "RelativeToolTip": "WpfApp\\Components\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T16:18:21.751Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Bus.cs",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Components\\MTCs\\Bus.cs",
+              "RelativeDocumentMoniker": "WpfApp\\Components\\MTCs\\Bus.cs",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Components\\MTCs\\Bus.cs",
+              "RelativeToolTip": "WpfApp\\Components\\MTCs\\Bus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T16:19:10.905Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+>>>>>>> 5af61f9510656b8176a025a2a05da58039cef24f
               "Title": "MTC.cs",
               "DocumentMoniker": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Components\\MTC.cs",
               "RelativeDocumentMoniker": "WpfApp\\Components\\MTC.cs",
@@ -278,6 +444,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 18,
               "Title": "Person.cs",
               "DocumentMoniker": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Components\\Person.cs",
@@ -331,6 +498,25 @@
               "DocumentMoniker": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Components\\MTCs\\Tram.cs",
               "RelativeDocumentMoniker": "WpfApp\\Components\\MTCs\\Tram.cs",
               "ToolTip": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Components\\MTCs\\Tram.cs",
+=======
+              "DocumentIndex": 5,
+              "Title": "WpfApp.csproj",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\WpfApp.csproj",
+              "RelativeDocumentMoniker": "WpfApp\\WpfApp.csproj",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\WpfApp.csproj",
+              "RelativeToolTip": "WpfApp\\WpfApp.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-28T15:59:55.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Tram.cs",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Components\\MTCs\\Tram.cs",
+              "RelativeDocumentMoniker": "WpfApp\\Components\\MTCs\\Tram.cs",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Components\\MTCs\\Tram.cs",
+>>>>>>> 5af61f9510656b8176a025a2a05da58039cef24f
               "RelativeToolTip": "WpfApp\\Components\\MTCs\\Tram.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -338,11 +524,19 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 12,
               "Title": "Subway.cs",
               "DocumentMoniker": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Components\\MTCs\\Subway.cs",
               "RelativeDocumentMoniker": "WpfApp\\Components\\MTCs\\Subway.cs",
               "ToolTip": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Components\\MTCs\\Subway.cs",
+=======
+              "DocumentIndex": 6,
+              "Title": "Subway.cs",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Components\\MTCs\\Subway.cs",
+              "RelativeDocumentMoniker": "WpfApp\\Components\\MTCs\\Subway.cs",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Components\\MTCs\\Subway.cs",
+>>>>>>> 5af61f9510656b8176a025a2a05da58039cef24f
               "RelativeToolTip": "WpfApp\\Components\\MTCs\\Subway.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -350,7 +544,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 20,
+=======
+              "DocumentIndex": 12,
+>>>>>>> 5af61f9510656b8176a025a2a05da58039cef24f
               "Title": "SearchTransportView.cs",
               "DocumentMoniker": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Components\\SearchTransportView.cs",
               "RelativeDocumentMoniker": "WpfApp\\Components\\SearchTransportView.cs",
@@ -362,7 +560,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 21,
+=======
+              "DocumentIndex": 13,
+>>>>>>> 5af61f9510656b8176a025a2a05da58039cef24f
               "Title": "LoginView.cs",
               "DocumentMoniker": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Components\\LoginView.cs",
               "RelativeDocumentMoniker": "WpfApp\\Components\\LoginView.cs",
@@ -374,7 +576,46 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 22,
+=======
+              "DocumentIndex": 14,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\MainWindow.xaml.cs",
+              "RelativeToolTip": "WpfApp\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwBMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T14:23:11.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Login.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Login.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp\\Login.xaml.cs",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Login.xaml.cs",
+              "RelativeToolTip": "WpfApp\\Login.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T14:59:09.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Login.xaml",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Login.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\Login.xaml",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Login.xaml",
+              "RelativeToolTip": "WpfApp\\Login.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-28T14:58:56.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+>>>>>>> 5af61f9510656b8176a025a2a05da58039cef24f
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\App.xaml.cs",
               "RelativeDocumentMoniker": "WpfApp\\App.xaml.cs",
@@ -383,6 +624,65 @@
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-28T14:27:18.606Z"
+<<<<<<< HEAD
+=======
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\App.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\App.xaml",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\App.xaml",
+              "RelativeToolTip": "WpfApp\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-28T14:27:16.129Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\MainWindow.xaml",
+              "RelativeToolTip": "WpfApp\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-28T14:23:13.081Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "416e22b5-41bd-4f9b-a2ca-060b94bed1e9",
+        "Display": 0,
+        "X": 0,
+        "Y": 64,
+        "Width": 800,
+        "Height": 600,
+        "WindowState": 2
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Search.xaml",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Search.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\Search.xaml",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WPF_App\\WpfApp\\WpfApp\\Search.xaml",
+              "RelativeToolTip": "WpfApp\\Search.xaml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAIwEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-29T06:11:19.553Z",
+              "EditorCaption": ""
+>>>>>>> 5af61f9510656b8176a025a2a05da58039cef24f
             }
           ]
         }
