@@ -20,7 +20,7 @@ namespace WpfApp
         // Route images and stations for each transport type
         private Dictionary<string, (string LeftImage, string RightImage, List<string> Stations)> routeData = new Dictionary<string, (string, string, List<string>)>
         {
-            { "Tramvai nr. 10", ("Images/Route10_Left.jpg", "Images/Route10_Right.jpg", new List<string> { "Station A", "Station B", "Station C" }) },
+            { "Tramvai nr. 10", ("Images/map2_jpg.jpg", "Images/map2_jpg.jpg", new List<string> { "Station A", "Station B", "Station C" }) },
             { "Tramvai nr. 11", ("Images/Route11_Left.jpg", "Images/Route11_Right.jpg", new List<string> { "Station D", "Station E", "Station F" }) },
             { "Autobuz nr. 100", ("Images/Route100_Left.jpg", "Images/Route100_Right.jpg", new List<string> { "Station G", "Station H", "Station I" }) }
             // Add more routes here as needed
@@ -30,7 +30,7 @@ namespace WpfApp
         {
             InitializeComponent();
         }
-
+        
         private void SearchTextBox_GotFocus(object sender, RoutedEventArgs e)
         {
             FloatingLabel.Visibility = Visibility.Collapsed;
@@ -74,11 +74,14 @@ namespace WpfApp
                 {
                     var routeInfo = routeData[selectedSuggestion];
 
+                    // Set the images from the specified paths
                     LeftImage.Source = new BitmapImage(new Uri(routeInfo.LeftImage, UriKind.Relative));
                     RightImage.Source = new BitmapImage(new Uri(routeInfo.RightImage, UriKind.Relative));
                     StationsList.Text = string.Join(", ", routeInfo.Stations); // Join station names with a comma
 
                     // Make the route display visible
+                    LeftImage.Visibility = Visibility.Visible;  // Show left image
+                    RightImage.Visibility = Visibility.Visible; // Show right image
                     RouteDisplay.Visibility = Visibility.Visible;
                 }
                 else
@@ -87,10 +90,13 @@ namespace WpfApp
                     LeftImage.Source = null; // Or set default images
                     RightImage.Source = null;
                     StationsList.Text = string.Empty; // Or default text
+                    LeftImage.Visibility = Visibility.Collapsed;  // Hide left image
+                    RightImage.Visibility = Visibility.Collapsed; // Hide right image
                     RouteDisplay.Visibility = Visibility.Collapsed; // Hide if no valid selection
                 }
             }
         }
+
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)
         {

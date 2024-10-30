@@ -9,7 +9,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Images\" />
+    <None Remove="Images\bk1.jpg" />
+    <None Remove="Images\bk_bun.jpg" />
+    <None Remove="Images\bk_final.jpg" />
+    <None Remove="Images\map2_jpg.jpg" />
+    <None Remove="Images\wallpaper.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\bk1.jpg" />
+    <Resource Include="Images\bk_bun.jpg" />
+    <Resource Include="Images\bk_final.jpg" />
+    <Resource Include="Images\map2_jpg.jpg" />
+    <Resource Include="Images\wallpaper.jpg" />
   </ItemGroup>
 
 </Project>
