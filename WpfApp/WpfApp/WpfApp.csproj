@@ -143,5 +143,23 @@
   <ItemGroup>
     <Resource Include="Images\tram_im.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bk_bun.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bk_final.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bk1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bk2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bk3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\wallpaper.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
