@@ -161,5 +161,17 @@
   <ItemGroup>
     <Resource Include="Images\wallpaper.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\map2_jpg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\default_map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\autobuz_100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\default_map_new.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

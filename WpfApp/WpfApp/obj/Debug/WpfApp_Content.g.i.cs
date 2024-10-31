@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/wallpaper.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/default_map_new.png")]
 
 

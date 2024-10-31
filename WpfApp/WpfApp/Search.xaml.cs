@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -18,15 +19,25 @@ namespace WpfApp
         };
 
         // Route images and stations for each transport type
-        private Dictionary<string, (string LeftImage, string RightImage, List<string> Stations)> routeData = new Dictionary<string, (string, string, List<string>)>
+        private Dictionary<string, (string LeftImage, List<StationArrival> Arrivals)> routeData = new Dictionary<string, (string, List<StationArrival>)>
         {
-            { "Tramvai nr. 10", ("Images/map2_jpg.jpg", "Images/map2_jpg.jpg", new List<string> { "Station A", "Station B", "Station C" }) },
-            { "Tramvai nr. 11", ("Images/Route11_Left.jpg", "Images/Route11_Right.jpg", new List<string> { "Station D", "Station E", "Station F" }) },
-            { "Autobuz nr. 100", ("Images/Route100_Left.jpg", "Images/Route100_Right.jpg", new List<string> { "Station G", "Station H", "Station I" }) }
+            { "Tramvai nr. 10", ("Images/default_map_new.png", new List<StationArrival> { new StationArrival("Station A", new List<string> { "10:00", "10:15", "10:30" }),
+                                                                          new StationArrival("Station B", new List<string> { "10:05", "10:20", "10:35" }),
+                                                                          new StationArrival("Station C", new List<string> { "10:10", "10:25", "10:40" }) }) },
+            { "Tramvai nr. 11", ("Images/Route11_Left.jpg", new List<StationArrival> { new StationArrival("Station D", new List<string> { "11:00", "11:15", "11:30" }),
+                                                                          new StationArrival("Station E", new List<string> { "11:05", "11:20", "11:35" }),
+                                                                          new StationArrival("Station F", new List<string> { "11:10", "11:25", "11:40" }) }) },
+            { "Autobuz nr. 100", ("Images/autobuz_100.png", new List<StationArrival> { new StationArrival("Station G", new List<string> { "12:00", "12:15", "12:30" }),
+                                                                          new StationArrival("Station H", new List<string> { "12:05", "12:20", "12:35" }),
+                                                                          new StationArrival("Station I", new List<string> { "12:10", "12:25", "12:40" }) }) }
             // Add more routes here as needed
         };
 
-        public Search() => InitializeComponent();
+        public Search()
+        {
+            InitializeComponent();
+            LeftImage.MouseLeftButtonUp += LeftImage_MouseLeftButtonUp;
+        }
 
         private void SearchTextBox_GotFocus(object sender, RoutedEventArgs e)
         {
@@ -59,45 +70,71 @@ namespace WpfApp
         {
             if (SuggestionsListBox.SelectedItem != null)
             {
-                SearchTextBox.Text = SuggestionsListBox.SelectedItem.ToString();
+                string selectedSuggestion = SuggestionsListBox.SelectedItem.ToString();
+                SearchTextBox.Text = selectedSuggestion;
                 SuggestionsListBox.Visibility = Visibility.Collapsed;
                 FloatingLabel.Visibility = Visibility.Collapsed;
 
-                // Update images and station list based on selection
-                string selectedSuggestion = SuggestionsListBox.SelectedItem.ToString();
-
-                // Example logic for setting images and stations based on selection
                 if (routeData.ContainsKey(selectedSuggestion))
                 {
                     var routeInfo = routeData[selectedSuggestion];
 
-                    // Set the images from the specified paths
+                    // Set the images and station list based on the selected option
                     LeftImage.Source = new BitmapImage(new Uri(routeInfo.LeftImage, UriKind.Relative));
-                    RightImage.Source = new BitmapImage(new Uri(routeInfo.RightImage, UriKind.Relative));
-                    StationsList.Text = string.Join(", ", routeInfo.Stations); // Join station names with a comma
+                    LeftImage.Visibility = Visibility.Visible;
 
-                    // Make the route display visible
-                    LeftImage.Visibility = Visibility.Visible;  // Show left image
-                    RightImage.Visibility = Visibility.Visible; // Show right image
-                    RouteDisplay.Visibility = Visibility.Visible;
+                    // Set data for the DataGrid
+                    StationsDataGrid.ItemsSource = routeInfo.Arrivals;
+
+                    // Set visibility for RouteDisplay
+                    RouteDisplay.Visibility = Visibility.Visible; // Show the RouteDisplay
+
+                    // Optionally set the content of the RouteDisplay, like station names
+                    StationsList.Text = string.Join(", ", routeInfo.Arrivals.Select(a => a.StationName));
                 }
                 else
                 {
-                    // Handle other suggestions
-                    LeftImage.Source = null; // Or set default images
-                    RightImage.Source = null;
-                    StationsList.Text = string.Empty; // Or default text
-                    LeftImage.Visibility = Visibility.Collapsed;  // Hide left image
-                    RightImage.Visibility = Visibility.Collapsed; // Hide right image
-                    RouteDisplay.Visibility = Visibility.Collapsed; // Hide if no valid selection
+                    // Clear data if no route found
+                    LeftImage.Source = null;
+                    LeftImage.Visibility = Visibility.Collapsed;
+                    StationsDataGrid.Visibility = Visibility.Collapsed;
+                    RouteDisplay.Visibility = Visibility.Collapsed; // Hide the RouteDisplay
                 }
             }
         }
 
-
         private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show($"Searching for: {SearchTextBox.Text}");
+        }
+
+        private void LeftImage_MouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            // Open the popup when LeftImage is clicked
+            ImagePopup.IsOpen = true;
+        }
+
+        private void ImagePopup_MouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            // Close the popup when it's clicked
+            ImagePopup.IsOpen = false;
+        }
+
+
+        // Class to represent station arrival times
+        public class StationArrival
+        {
+            public string StationName { get; set; }
+            public List<string> ArrivalTimes { get; set; }
+
+            // New property to display arrival times as a string
+            public string ArrivalTimesDisplay => string.Join(", ", ArrivalTimes);
+
+            public StationArrival(string stationName, List<string> arrivalTimes)
+            {
+                StationName = stationName;
+                ArrivalTimes = arrivalTimes;
+            }
         }
     }
 }
