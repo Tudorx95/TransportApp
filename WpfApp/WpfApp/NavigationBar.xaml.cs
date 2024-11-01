@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
+using WpfApp.Components;
 
 namespace WpfApp
 {
@@ -12,10 +13,10 @@ namespace WpfApp
         }
 
         // Helper method to navigate to a specific UserControl
-        private void NavigateTo(Type pageType)
+        static public void NavigateTo(Type pageType)
         {
             MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
-
+            
             // Dynamically create an instance of the specified UserControl type
             if (Activator.CreateInstance(pageType) is UserControl pageInstance)
             {
@@ -34,12 +35,35 @@ namespace WpfApp
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            NavigateTo(typeof(Login));
+            if(Login.connected)
+            {
+                Login.connected=false;
+                MessageBox.Show("Log out successfully!");
+                UpdateLoginButton();
+            }
+            NavigateTo(typeof(Login));          
         }
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
-            NavigateTo(typeof(Search));
+
+            if (Login.connected)
+                NavigateTo(typeof(Search));
+            else NavigateTo(typeof(Login));
+            
+        }
+        public void UpdateLoginButton()
+        {
+            if (Login.connected)
+            {
+                // Change button text to "Log Out"
+                LoginButton.Content = "Log Out";
+            }
+            else
+            {
+                // Change button text back to "Login"
+                LoginButton.Content = "Log in";
+            }
         }
     }
 }

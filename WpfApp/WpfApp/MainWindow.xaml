@@ -8,7 +8,7 @@
         Title="Public Transport App" Height="600" Width="800">
     <Grid>
         <!-- Floating Top Navigation Bar -->
-        <local:NavigationBar  VerticalAlignment="Top"/>
+        <local:NavigationBar  x:Name="NavBar" VerticalAlignment="Top"/>
 
         <!-- Main Content Area -->
         <ContentControl x:Name="MainContent" Margin="0,50,0,0">

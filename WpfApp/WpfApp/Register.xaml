@@ -13,21 +13,25 @@
 
                 <!-- First Name -->
                 <TextBlock Text="First Name" FontWeight="Bold" Margin="0,0,0,0"/>
-                <TextBox Name="FirstNameTextBox" Width="200" Height="30" Margin="0,0,0,10"/>
+                <TextBox Name="FirstNameTextBox" Width="198" Height="18" Margin="0,0,0,10"/>
 
                 <!-- Last Name -->
                 <TextBlock Text="Last Name" FontWeight="Bold" Margin="0,0,0,0"/>
-                <TextBox Name="LastNameTextBox" Width="200" Height="30" Margin="0,0,0,10"/>
+                <TextBox Name="LastNameTextBox" Width="202" Height="20" Margin="0,0,0,10"/>
 
                 <!-- Email Address -->
                 <TextBlock Text="Email" FontWeight="Bold" Margin="0,0,0,0"/>
-                <TextBox Name="EmailTextBox" Width="200" Height="30" Margin="0,0,0,10"/>
+                <TextBox Name="EmailTextBox" Width="201" Height="21" Margin="0,0,0,10"/>
 
+                <!-- Email Address -->
+                <TextBlock Text="Username" FontWeight="Bold" Margin="0,0,0,0"/>
+                <TextBox Name="UsernameBox" Width="201" Height="21" Margin="0,0,0,10"/>
+                
                 <!-- Password -->
                 <TextBlock Text="Password" FontWeight="Bold" Margin="0,0,0,0"/>
-                <TextBox Name="Password" Width="200" Height="30" Margin="0,0,0,10"/>
+                <TextBox Name="Password" Width="202" Height="21" Margin="0,0,0,10"/>
                 <TextBlock Text="Password Again" FontWeight="Bold" Margin="0,0,0,0"/>
-                <TextBox Name="Password2" Width="200" Height="30" Margin="0,0,0,10"/>
+                <TextBox Name="Password2" Width="202" Height="22" Margin="0,0,0,10"/>
 
                 <!-- Register Button -->
                 <Button Content="Register" Width="200" Height="30" Click="RegisterButton_Click"/>

@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Data;
+using System.Windows;
 using System.Windows.Controls;
 using WpfApp.Components;
 
@@ -6,6 +7,7 @@ namespace WpfApp
 {
     public partial class Login : UserControl
     {
+        static public bool connected { get; set; } = false;
         public Login()
         {
             InitializeComponent();
@@ -39,10 +41,18 @@ namespace WpfApp
             string username = UsernameTextBox.Text;
             string password = PasswordBox.Password;
 
-            string encryptedPassword = Crypt.Encrypt(password);
+            //string encryptedPassword = Crypt.Encrypt(password);
             // verify the integrity of the password
-            
-            //MessageBox.Show($"Login clicked for {username} with encrypted password: {encryptedPassword}");
+
+            if (User.Exist_User(username,password))
+            {
+                // set connected state to true
+                Login.connected = true;
+                // navigate to search window
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.UpdateNavBar();
+                NavigationBar.NavigateTo(typeof(Search));
+            }
         }
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)

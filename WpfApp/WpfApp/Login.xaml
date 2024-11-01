@@ -14,14 +14,14 @@
 
                 <!-- Username TextBox with Placeholder -->
                 <Grid Margin="0,0,0,10">
-                    <TextBox Name="UsernameTextBox" Width="200" Height="30" GotFocus="UsernameTextBox_GotFocus" LostFocus="UsernameTextBox_LostFocus" />
-                    <TextBlock Name="UsernamePlaceholder" Text="Username" Foreground="Gray" VerticalAlignment="Center" Margin="5,0,0,0" IsHitTestVisible="False"/>
+                    <TextBox Name="UsernameTextBox" GotFocus="UsernameTextBox_GotFocus" LostFocus="UsernameTextBox_LostFocus" Margin="10,-4,10,-4" />
+                    <TextBlock Name="UsernamePlaceholder" Text="Username" Foreground="Gray" VerticalAlignment="Top" IsHitTestVisible="False" Height="18" HorizontalAlignment="Center" Margin="0,-2,0,0"/>
                 </Grid>
 
                 <!-- Password PasswordBox with Placeholder -->
-                <Grid Margin="0,0,0,20">
-                    <PasswordBox Name="PasswordBox" Width="200" Height="30" GotFocus="PasswordBox_GotFocus" LostFocus="PasswordBox_LostFocus"/>
-                    <TextBlock Name="PasswordPlaceholder" Text="Password" Foreground="Gray" VerticalAlignment="Center" Margin="5,0,0,0" IsHitTestVisible="False"/>
+                <Grid Margin="0,0,0,20" Height="25" Width="204">
+                    <PasswordBox Name="PasswordBox" GotFocus="PasswordBox_GotFocus" LostFocus="PasswordBox_LostFocus" Margin="10,1,10,0"/>
+                    <TextBlock Name="PasswordPlaceholder" Text="Password" Foreground="Gray" VerticalAlignment="Center" IsHitTestVisible="False" Height="16" HorizontalAlignment="Center"/>
                 </Grid>
 
                 <Button Content="Login" Width="200" Height="30" Click="LoginButton_Click"/>

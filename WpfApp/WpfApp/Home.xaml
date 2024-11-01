@@ -14,6 +14,7 @@
                 <Grid>
                     <TextBlock Text="Welcome to the Home Page" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     <Image Source="C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WPF_App\WpfApp\WpfApp\Images\tram_im.jpg" Width="738" Height="241" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="53,10,0,0"/>
+                    <DataGrid x:Name="PersonsDataGrid" Margin="10,40,10,10" AutoGenerateColumns="True"/>
                 </Grid>
             </ContentControl>
 
