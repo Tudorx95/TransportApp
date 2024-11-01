@@ -1,62 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\",
+  "WorkspaceRootPath": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WpfApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|c:\\users\\tudor\\onedrive\\atm\\an iii\\sem1\\administrare bd\\transportapp\\wpfapp\\wpfapp\\home.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\home.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\git\\TransportApp\\WpfApp\\wpfapp\\search.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\search.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|c:\\users\\tudor\\onedrive\\atm\\an iii\\sem1\\administrare bd\\transportapp\\wpfapp\\wpfapp\\components\\searchtransportview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\components\\searchtransportview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|c:\\users\\tudor\\onedrive\\atm\\an iii\\sem1\\administrare bd\\transportapp\\wpfapp\\wpfapp\\search.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|c:\\users\\razva\\desktop\\git\\transportapp\\wpfapp\\wpfapp\\search.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\search.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|c:\\users\\tudor\\onedrive\\atm\\an iii\\sem1\\administrare bd\\transportapp\\wpfapp\\wpfapp\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|c:\\users\\tudor\\onedrive\\atm\\an iii\\sem1\\administrare bd\\transportapp\\wpfapp\\wpfapp\\login.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\login.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|c:\\users\\tudor\\onedrive\\atm\\an iii\\sem1\\administrare bd\\transportapp\\wpfapp\\wpfapp\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|c:\\users\\tudor\\onedrive\\atm\\an iii\\sem1\\administrare bd\\transportapp\\wpfapp\\wpfapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|c:\\users\\tudor\\onedrive\\atm\\an iii\\sem1\\administrare bd\\transportapp\\wpfapp\\wpfapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|c:\\users\\tudor\\onedrive\\atm\\an iii\\sem1\\administrare bd\\transportapp\\wpfapp\\wpfapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|c:\\users\\tudor\\onedrive\\atm\\an iii\\sem1\\administrare bd\\transportapp\\wpfapp\\wpfapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|c:\\users\\tudor\\onedrive\\atm\\an iii\\sem1\\administrare bd\\transportapp\\wpfapp\\wpfapp\\navigationbar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\navigationbar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|c:\\users\\tudor\\onedrive\\atm\\an iii\\sem1\\administrare bd\\transportapp\\wpfapp\\wpfapp\\search.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\search.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|c:\\users\\tudor\\onedrive\\atm\\an iii\\sem1\\administrare bd\\transportapp\\wpfapp\\wpfapp\\register.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\register.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|c:\\users\\tudor\\onedrive\\atm\\an iii\\sem1\\administrare bd\\transportapp\\wpfapp\\wpfapp\\navigationbar.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{FC23D884-D7C6-4A6F-BCAE-7E30E6C4A0E6}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\navigationbar.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -75,179 +27,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Home.xaml",
-              "DocumentMoniker": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\WpfApp\\Home.xaml",
-              "RelativeDocumentMoniker": "WpfApp\\Home.xaml",
-              "ToolTip": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\WpfApp\\Home.xaml",
-              "RelativeToolTip": "WpfApp\\Home.xaml",
+              "Title": "Search.xaml",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WpfApp\\WpfApp\\Search.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\Search.xaml",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WpfApp\\WpfApp\\Search.xaml",
+              "RelativeToolTip": "WpfApp\\Search.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-29T18:14:57.491Z",
+              "WhenOpened": "2024-10-30T13:54:45.287Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "SearchTransportView.cs",
-              "DocumentMoniker": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\WpfApp\\Components\\SearchTransportView.cs",
-              "RelativeDocumentMoniker": "WpfApp\\Components\\SearchTransportView.cs",
-              "ToolTip": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\WpfApp\\Components\\SearchTransportView.cs",
-              "RelativeToolTip": "WpfApp\\Components\\SearchTransportView.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T18:12:55.599Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Search.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\WpfApp\\Search.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WpfApp\\WpfApp\\Search.xaml.cs",
               "RelativeDocumentMoniker": "WpfApp\\Search.xaml.cs",
-              "ToolTip": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\WpfApp\\Search.xaml.cs",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\git\\TransportApp\\WpfApp\\WpfApp\\Search.xaml.cs",
               "RelativeToolTip": "WpfApp\\Search.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAiwIcAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-29T18:12:35.365Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Register.xaml",
-              "DocumentMoniker": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\WpfApp\\Register.xaml",
-              "RelativeDocumentMoniker": "WpfApp\\Register.xaml",
-              "ToolTip": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\WpfApp\\Register.xaml",
-              "RelativeToolTip": "WpfApp\\Register.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-29T18:10:06.735Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Login.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\WpfApp\\Login.xaml.cs",
-              "RelativeDocumentMoniker": "WpfApp\\Login.xaml.cs",
-              "ToolTip": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\WpfApp\\Login.xaml.cs",
-              "RelativeToolTip": "WpfApp\\Login.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T18:08:53.642Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\WpfApp\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "WpfApp\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\WpfApp\\MainWindow.xaml.cs",
-              "RelativeToolTip": "WpfApp\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T18:03:43.613Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Login.xaml",
-              "DocumentMoniker": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\WpfApp\\Login.xaml",
-              "RelativeDocumentMoniker": "WpfApp\\Login.xaml",
-              "ToolTip": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\WpfApp\\Login.xaml",
-              "RelativeToolTip": "WpfApp\\Login.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-29T18:04:50.969Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\WpfApp\\App.xaml.cs",
-              "RelativeDocumentMoniker": "WpfApp\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\WpfApp\\App.xaml.cs",
-              "RelativeToolTip": "WpfApp\\App.xaml.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T18:05:24.672Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\WpfApp\\App.xaml",
-              "RelativeDocumentMoniker": "WpfApp\\App.xaml",
-              "ToolTip": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\WpfApp\\App.xaml",
-              "RelativeToolTip": "WpfApp\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-29T18:05:22.721Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\WpfApp\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "WpfApp\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\WpfApp\\MainWindow.xaml",
-              "RelativeToolTip": "WpfApp\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-29T18:03:43.935Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "NavigationBar.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\WpfApp\\NavigationBar.xaml.cs",
-              "RelativeDocumentMoniker": "WpfApp\\NavigationBar.xaml.cs",
-              "ToolTip": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\WpfApp\\NavigationBar.xaml.cs",
-              "RelativeToolTip": "WpfApp\\NavigationBar.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T18:05:15.701Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Search.xaml",
-              "DocumentMoniker": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\WpfApp\\Search.xaml",
-              "RelativeDocumentMoniker": "WpfApp\\Search.xaml",
-              "ToolTip": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\WpfApp\\Search.xaml",
-              "RelativeToolTip": "WpfApp\\Search.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-29T18:04:49.351Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Register.xaml",
-              "DocumentMoniker": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\WpfApp\\Register.xaml",
-              "RelativeDocumentMoniker": "WpfApp\\Register.xaml",
-              "ToolTip": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\WpfApp\\Register.xaml",
-              "RelativeToolTip": "WpfApp\\Register.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-29T18:04:47.629Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "NavigationBar.xaml",
-              "DocumentMoniker": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\WpfApp\\NavigationBar.xaml",
-              "RelativeDocumentMoniker": "WpfApp\\NavigationBar.xaml",
-              "ToolTip": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportApp\\WpfApp\\WpfApp\\NavigationBar.xaml",
-              "RelativeToolTip": "WpfApp\\NavigationBar.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-29T18:04:45.067Z",
               "EditorCaption": ""
             }
           ]
