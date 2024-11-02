@@ -5,19 +5,133 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
-        Height="600" Width="800">
+        Height="755" Width="1588">
 
-    <Grid>
+    <UserControl.Resources>
+        <!--Animation Storyboard for moving buses with constant speed and looping effect-->
+        <Storyboard x:Key="BusAnimationStoryboard" RepeatBehavior="Forever">
+            <!--Animate Bus1-->
+            <DoubleAnimation Storyboard.TargetName="Bus1" Storyboard.TargetProperty="(Canvas.Left)"
+                             From="-100" To="2000" Duration="0:0:12"
+                             RepeatBehavior="Forever" BeginTime="0:0:0"/>
 
-        <!-- Main Content Area -->
-            <ContentControl x:Name="MainContent" Margin="0,50,0,0">
-                <Grid>
-                    <TextBlock Text="Welcome to the Home Page" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    <Image Source="C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WPF_App\WpfApp\WpfApp\Images\tram_im.jpg" Width="738" Height="241" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="53,10,0,0"/>
-                    <DataGrid x:Name="PersonsDataGrid" Margin="10,40,10,10" AutoGenerateColumns="True"/>
+            <!--Animate Bus2 with delay to keep constant distance-->
+            <DoubleAnimation Storyboard.TargetName="Bus2" Storyboard.TargetProperty="(Canvas.Left)"
+                             From="-300" To="2000" Duration="0:0:13"
+                             RepeatBehavior="Forever" BeginTime="0:0:3"/>
+
+            <!--Animate Bus3 with additional delay to maintain spacing-->
+            <DoubleAnimation Storyboard.TargetName="Bus3" Storyboard.TargetProperty="(Canvas.Left)"
+                             From="-500" To="2000" Duration="0:0:14"
+                             RepeatBehavior="Forever" BeginTime="0:0:4"/>
+            <DoubleAnimation Storyboard.TargetName="Bus4" Storyboard.TargetProperty="(Canvas.Left)"
+                             From="-700" To="2000" Duration="0:0:15"
+                             RepeatBehavior="Forever" BeginTime="0:0:5"/>
+            <DoubleAnimation Storyboard.TargetName="Bus5" Storyboard.TargetProperty="(Canvas.Left)"
+                 From="-1000" To="2000" Duration="0:0:16"
+                 RepeatBehavior="Forever" BeginTime="0:0:6"/>
+
+        </Storyboard>
+
+        <Storyboard x:Key="BusAnimationStoryboardReverse" RepeatBehavior="Forever">
+            <!--Animate Bus1-->
+            <DoubleAnimation Storyboard.TargetName="Bus01" Storyboard.TargetProperty="(Canvas.Left)"
+                     From="2000" To="-100" Duration="0:0:12"
+                     RepeatBehavior="Forever" BeginTime="0:0:2"/>
+
+            <!--Animate Bus2 with delay to keep constant distance-->
+            <DoubleAnimation Storyboard.TargetName="Tram1" Storyboard.TargetProperty="(Canvas.Left)"
+                     From="2100" To="-300" Duration="0:0:13"
+                     RepeatBehavior="Forever" BeginTime="0:0:3"/>
+
+            <!--Animate Bus3 with additional delay to maintain spacing-->
+            <DoubleAnimation Storyboard.TargetName="Bus02" Storyboard.TargetProperty="(Canvas.Left)"
+                     From="2100" To="-500" Duration="0:0:14"
+                     RepeatBehavior="Forever" BeginTime="0:0:4"/>
+            <DoubleAnimation Storyboard.TargetName="Tram2" Storyboard.TargetProperty="(Canvas.Left)"
+                     From="2100" To="-700" Duration="0:0:15"
+                     RepeatBehavior="Forever" BeginTime="0:0:5"/>
+            <DoubleAnimation Storyboard.TargetName="Bus03" Storyboard.TargetProperty="(Canvas.Left)"
+         From="2000" To="-1000" Duration="0:0:16"
+         RepeatBehavior="Forever" BeginTime="0:0:6"/>
+
+            <DoubleAnimation Storyboard.TargetName="BottomBar" Storyboard.TargetProperty="(Canvas.Left)" 
+                             From="2000" To="-1000" Duration="8" RepeatBehavior="Forever"/>
+        </Storyboard>
+    </UserControl.Resources>
+
+    <Grid Background="White">
+
+        <local:VideoPlayerControl Panel.ZIndex="0" VerticalAlignment="Top" Margin="-181,75,-231,0" Height="680"/>
+        
+        <Grid HorizontalAlignment="Left" Height="155" VerticalAlignment="Top" Margin="-36,-41,0,0" Width="1624" Panel.ZIndex="1">
+            <Grid.Background>
+                <ImageBrush ImageSource="Images/Road.jpg"/>
+            </Grid.Background>
+
+            <!-- Main Content Area -->
+            <ContentControl x:Name="MainContent" Margin="-24,-26,24,26">
+                <Grid Margin="10,110,-10,-111">
+                    <!--<DataGrid x:Name="PersonsDataGrid" Margin="0,40,10,0" AutoGenerateColumns="True"/>-->
+                    <!--Canvas for Traffic Animation-->
+                    <Canvas x:Name="BusCanvas" HorizontalAlignment="Left" VerticalAlignment="Top" Width="2076" Height="106" Margin="-189,-15,0,0" Panel.ZIndex="1">
+                        <Image x:Name="Bus1" Source="Images/Home_Images/bus1.gif" Width="100" Height="100" Canvas.Top="10" Canvas.Left="10"/>
+                        <Image x:Name="Bus2" Source="Images/Home_Images/bus2.gif" Width="100" Height="100" Canvas.Top="-1" Canvas.Left="4" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <Image x:Name="Bus3" Source="Images/Home_Images/bus3.gif" Width="100" Height="100" Canvas.Left="10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <Image x:Name="Bus4" Source="Images/Home_Images/bus4.gif" Width="100" Height="77" Canvas.Left="4" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="44"/>
+                        <Image x:Name="Bus5" Source="Images/Home_Images/bus5.gif" Width="157" Height="109" Canvas.Left="1" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="47"/>
+                    </Canvas>
+                    <Canvas x:Name="BusCanvasReverse" HorizontalAlignment="Left" VerticalAlignment="Top" Width="2074" Height="106" Margin="-276,-46,0,0" Panel.ZIndex="0">
+                        <Image x:Name="Bus01" Source="Images/Home_Images/bus6.gif" Width="100" Height="100" Canvas.Top="11" Canvas.Left="1986"/>
+                        <Image x:Name="Tram1" Source="Images/Home_Images/tram4.gif" Width="185" Height="71" Canvas.Left="2045" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="42"/>
+                        <Image x:Name="Bus02" Source="Images/Home_Images/bus6.gif" Width="100" Height="100" Canvas.Left="2045" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Top="40"/>
+                        <Image x:Name="Tram2" Source="Images/Home_Images/tram4.gif" Width="185" Height="71" Canvas.Left="2150" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="44"/>
+                        <Image x:Name="Bus03" Source="Images/Home_Images/bus6.gif" Width="100" Height="100" Canvas.Left="2100" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Top="40"/>
+                    </Canvas>
+                   
+                    <Border x:Name="BotBar" Background="Green" Height="26" VerticalAlignment="Bottom" Margin="37,0,-37,-558">
+                        <Canvas x:Name="BottomBar" HorizontalAlignment="Left" VerticalAlignment="Top">
+                            <TextBlock x:Name="NewsTextBlock" 
+                   Foreground="White" 
+                   FontSize="16" 
+                   Margin="0,0,100,0"
+                   Text="Latest News: Route 1 delays due to maintenance. | Route 3 is now running on schedule. | New bus stop added on Elm St.">
+                                <TextBlock.RenderTransform>
+                                    <TranslateTransform x:Name="NewsTextTransform" />
+                                </TextBlock.RenderTransform>
+                            </TextBlock>
+                        </Canvas>
+                    </Border>
+
                 </Grid>
             </ContentControl>
-
+        </Grid>
+        <Grid Margin="0,706,0,0" Panel.ZIndex="0">
         </Grid>
 
- </UserControl>
+    </Grid>
+
+    <!-- Trigger the Storyboard animation on load -->
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="UserControl.Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="Bus1" Storyboard.TargetProperty="(Canvas.Left)" From="-100" To="2000" Duration="0:0:12" RepeatBehavior="Forever"/>
+                    <DoubleAnimation Storyboard.TargetName="Bus2" Storyboard.TargetProperty="(Canvas.Left)" From="-300" To="2000" Duration="0:0:13" RepeatBehavior="Forever"/>
+                    <DoubleAnimation Storyboard.TargetName="Bus3" Storyboard.TargetProperty="(Canvas.Left)" From="-500" To="2000" Duration="0:0:14" RepeatBehavior="Forever"/>
+                    <DoubleAnimation Storyboard.TargetName="Bus4" Storyboard.TargetProperty="(Canvas.Left)" From="-700" To="2000" Duration="0:0:15" RepeatBehavior="Forever"/>
+                    <DoubleAnimation Storyboard.TargetName="Bus5" Storyboard.TargetProperty="(Canvas.Left)" From="-1000" To="2000" Duration="0:0:16" RepeatBehavior="Forever"/>
+
+                    <DoubleAnimation Storyboard.TargetName="Bus01" Storyboard.TargetProperty="(Canvas.Left)" From="2100" To="-100" Duration="0:0:12" RepeatBehavior="Forever"/>
+                    <DoubleAnimation Storyboard.TargetName="Tram1" Storyboard.TargetProperty="(Canvas.Left)" From="2300" To="-100" Duration="0:0:13" RepeatBehavior="Forever"/>
+                    <DoubleAnimation Storyboard.TargetName="Bus02" Storyboard.TargetProperty="(Canvas.Left)" From="2500" To="-100" Duration="0:0:14" RepeatBehavior="Forever"/>
+                    <DoubleAnimation Storyboard.TargetName="Tram2" Storyboard.TargetProperty="(Canvas.Left)" From="2700" To="-100" Duration="0:0:15" RepeatBehavior="Forever"/>
+                    <DoubleAnimation Storyboard.TargetName="Bus03" Storyboard.TargetProperty="(Canvas.Left)" From="3000" To="-100" Duration="0:0:16" RepeatBehavior="Forever"/>
+                    <!-- Here need to change from property because the text may too large and will stop in the middle of the bar -->
+                    <DoubleAnimation Storyboard.TargetName="NewsTextTransform" Storyboard.TargetProperty="X"  From="2000" To="-1000" Duration="0:0:16" RepeatBehavior="Forever"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </UserControl.Triggers>
+
+</UserControl>

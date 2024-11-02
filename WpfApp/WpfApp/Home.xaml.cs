@@ -11,6 +11,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WpfApp.Components;
@@ -22,22 +23,15 @@ namespace WpfApp
     /// </summary>
     public partial class Home : UserControl
     {
-        public Home()
-        {
-            InitializeComponent();
-
+       public Home()
+       {
+           InitializeComponent();
+            this.Loaded += Home_Loaded;
         }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void Home_Loaded(object sender, RoutedEventArgs e)
         {
-            var cmd = (SqlCommand)DB_Connect.connect.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT nume,prenume FROM Persoana";
-            var adapter=new SqlDataAdapter(cmd);
-            var dataset = new DataSet("set");
-            adapter.Fill(dataset, "Persoana");
-            var personsTable = dataset.Tables["Persoana"];
-            PersonsDataGrid.ItemsSource = personsTable.DefaultView;
+            var storyboard = (Storyboard)this.Resources["BusAnimationStoryboardReverse"];
+            storyboard.Begin();
         }
     }
 }

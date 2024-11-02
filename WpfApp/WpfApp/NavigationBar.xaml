@@ -4,6 +4,7 @@
              Height="30" HorizontalAlignment="Stretch" Background="Blue">
     <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Top" LastChildFill="True" >
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image Source="C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WpfApp\WpfApp\Images\logoSTB.png" Width="123" Height="24" Margin="5"/>
             <Button x:Name="HomeButton" Content="Home" Width="100" Click="HomeButton_Click" Margin="5"/>
             <Button x:Name="LoginButton"  Content="Log in/out" Width="100" Click="LoginButton_Click" Margin="5"/>
             <Button x:Name="SearchButton" Content="Search for Transport" Width="150" Click="SearchButton_Click" Margin="5"/>
