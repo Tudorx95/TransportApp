@@ -36,6 +36,14 @@ CREATE TABLE Persoana (
 );
 GO
 
+ALTER TABLE Persoana
+ALTER COLUMN CNP CHAR(13) NULL;
+GO
+ALTER TABLE Persoana
+ADD email NVARCHAR(255);
+GO
+
+
 -- Creare tabel User
 CREATE TABLE [User] (
     id_unic INT PRIMARY KEY,
