@@ -10,6 +10,7 @@
                   UnloadedBehavior="Stop"
                   Stretch="Uniform"
                   HorizontalAlignment="Stretch"
-                  VerticalAlignment="Stretch"/>
+                  VerticalAlignment="Stretch"
+                  MediaEnded="VideoPlayer_MediaEnded"/>
     
 </UserControl>

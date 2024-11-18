@@ -33,5 +33,36 @@ namespace WpfApp
             var storyboard = (Storyboard)this.Resources["BusAnimationStoryboardReverse"];
             storyboard.Begin();
         }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button clickedButton = sender as Button;
+            string buttonContent = clickedButton.Content.ToString();
+
+            switch (buttonContent)
+            {
+                case "Ticket/subscription":
+                    Ticket_Subscription_Info infos= new Ticket_Subscription_Info();
+                    infos.ShowDialog();
+                    break;
+                case "Student facilities":
+                    //MainContent.Content = new FacilitiesUser Control();
+                    StudentFacilities facilitiesWindow = new StudentFacilities();
+                    facilitiesWindow.Show();
+                    break;
+                case "Pupils free":
+                    // Load PupilsFreeUser Control
+                    Pupils_Free pupils_facilities= new Pupils_Free();
+                    pupils_facilities.Show();
+                    break;
+                case "Complains":
+                    // Load ComplainsUser Control
+                    Complains_Request req = new Complains_Request();
+                    req.Show();
+                    break;
+                default:
+                    MainContent.Content = null;
+                    break;
+            }
+        }
     }
 }

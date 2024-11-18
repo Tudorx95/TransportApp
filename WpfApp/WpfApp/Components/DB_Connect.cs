@@ -20,7 +20,7 @@ namespace WpfApp.Components
         static public void connection(string ip,string db_name)
         {
             connect = connect_to_DB(ip, db_name);
-        }
+        }   
         static private SqlConnection connect_to_DB(string ip, string db_name)
         {
             var connection = new SqlConnection();
@@ -34,6 +34,7 @@ namespace WpfApp.Components
             if (connect == null)
                 throw new InvalidOperationException("Database connection is not initialized.");
 
+         
             // Create a new SqlCommand and SqlDataAdapter to retrieve the table data
             var query = $"SELECT * FROM [{tableName}]";
             var cmd = new SqlCommand(query, connect);
@@ -43,6 +44,7 @@ namespace WpfApp.Components
             // Fill the DataTable with the result
             adapter.Fill(dataTable);
 
+         
             return dataTable;
         }
 

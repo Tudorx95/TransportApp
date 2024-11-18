@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Height="755" Width="1588">
 
@@ -60,18 +61,26 @@
         </Storyboard>
     </UserControl.Resources>
 
-    <Grid Background="White">
+    <Grid Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 
-        <local:VideoPlayerControl Panel.ZIndex="0" VerticalAlignment="Top" Margin="-181,75,-231,0" Height="680"/>
-        
-        <Grid HorizontalAlignment="Left" Height="155" VerticalAlignment="Top" Margin="-36,-41,0,0" Width="1624" Panel.ZIndex="1">
+        <!--<local:VideoPlayerControl Panel.ZIndex="0" VerticalAlignment="Top" Margin="-206,75,-206,0" Height="680"/>-->
+
+        <MediaElement x:Name="videoPlayer"
+                  Source="C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WpfApp\WpfApp\Images\PublicTransport.mp4"
+                  LoadedBehavior="Play"
+                  UnloadedBehavior="Manual"
+                  Stretch="Uniform"
+                  HorizontalAlignment="Stretch"
+                  VerticalAlignment="Stretch"/>
+
+        <Grid HorizontalAlignment="Stretch" Height="155" VerticalAlignment="Top" Margin="-36,-41,0,0" Width="1624" Panel.ZIndex="1">
             <Grid.Background>
                 <ImageBrush ImageSource="Images/Road.jpg"/>
             </Grid.Background>
 
             <!-- Main Content Area -->
             <ContentControl x:Name="MainContent" Margin="-24,-26,24,26">
-                <Grid Margin="10,110,-10,-111">
+                <Grid Margin="10,110,-10,-111" >
                     <!--<DataGrid x:Name="PersonsDataGrid" Margin="0,40,10,0" AutoGenerateColumns="True"/>-->
                     <!--Canvas for Traffic Animation-->
                     <Canvas x:Name="BusCanvas" HorizontalAlignment="Left" VerticalAlignment="Top" Width="2076" Height="106" Margin="-189,-15,0,0" Panel.ZIndex="1">
@@ -88,8 +97,8 @@
                         <Image x:Name="Tram2" Source="Images/Home_Images/tram4.gif" Width="185" Height="71" Canvas.Left="2150" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="44"/>
                         <Image x:Name="Bus03" Source="Images/Home_Images/bus6.gif" Width="100" Height="100" Canvas.Left="2100" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Top="40"/>
                     </Canvas>
-                   
-                    <Border x:Name="BotBar" Background="Green" Height="26" VerticalAlignment="Bottom" Margin="37,0,-37,-558">
+
+                    <Border x:Name="BotBar" Background="Green" Height="26" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Margin="37,0,-37,-558">
                         <Canvas x:Name="BottomBar" HorizontalAlignment="Left" VerticalAlignment="Top">
                             <TextBlock x:Name="NewsTextBlock" 
                    Foreground="White" 
@@ -106,7 +115,34 @@
                 </Grid>
             </ContentControl>
         </Grid>
-        <Grid Margin="0,706,0,0" Panel.ZIndex="0">
+
+        <Grid x:Name="LeftGrid" Margin="0,119,1398,25">
+            <ListBox Margin="0,-6,0,0" >
+                <ListBox.Background>
+                    <ImageBrush ImageSource="C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WpfApp\WpfApp\Images\Home_Images\Home_LeftSide_Bar2.png"/>
+                </ListBox.Background>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Button Content="{Binding}" Width="150" Height="20" Margin="5" Click="Button_Click"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+                <ListBox.ItemsSource>
+                    <x:Array Type="{x:Type sys:String}">
+                        <sys:String>Ticket/subscription</sys:String>
+                        <sys:String>Student facilities</sys:String>
+                        <sys:String>Pupils free</sys:String>
+                        <sys:String>Complains</sys:String>
+                    </x:Array>
+                </ListBox.ItemsSource>
+            </ListBox>
+        </Grid>
+
+
+        <Grid x:Name="RightGrid" Margin="1400,0,10,0">
+            <Grid.Background>
+                <ImageBrush ImageSource="C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WpfApp\WpfApp\Images\Home_Images\Home_LeftSide_Bar2.png"
+                    Stretch="UniformToFill"/>
+            </Grid.Background>
         </Grid>
 
     </Grid>

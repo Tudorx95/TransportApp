@@ -61,16 +61,26 @@ CREATE TABLE Tip_Bilet (
 );
 GO
 
+if OBJECT_ID('Bilet','U') is not null
+ drop table Bilet; 
 -- Creare tabel Bilet
 CREATE TABLE Bilet (
-    id_unic INT PRIMARY KEY,
+    id_unic INT IDENTITY(1,1) PRIMARY KEY,
     tip_bilet INT NOT NULL,
     valabilitate DATE NOT NULL,
     id_calator INT NOT NULL,
     CONSTRAINT FK_TipBilet_Bilet FOREIGN KEY (tip_bilet) REFERENCES Tip_Bilet(id_unic),
-    CONSTRAINT FK_User_Bilet FOREIGN KEY (id_calator) REFERENCES [User](id_unic)
+    CONSTRAINT FK_User_Bilet FOREIGN KEY (id_calator) REFERENCES [User](id_unic),
+	-- Add nr_bilete for the Bilet table
+	nr_bilete INT NOT NULL DEFAULT 1
 );
 GO
+
+
+ALTER TABLE Bilet
+ADD nr_bilete INT NOT NULL DEFAULT 1;
+go
+
 
 -- Creare tabel Tip_Angajat
 CREATE TABLE Tip_Angajat (
@@ -96,6 +106,18 @@ CREATE TABLE TipMT (
     id_unic INT PRIMARY KEY,
     nume NVARCHAR(100) NOT NULL
 );
+GO
+
+-- Create the Complaint table
+CREATE TABLE Complaint (
+    id_unic INT IDENTITY(1,1) PRIMARY KEY,          -- Auto-incrementing primary key
+    id_user INT NOT NULL,                            -- Foreign key to User table
+    text_plangere VARCHAR(1200),                     -- Complaint text (varchar with 1200 max length)
+    id_tip_MTC INT NOT NULL,                         -- Foreign key to TipMT table
+    CONSTRAINT FK_User FOREIGN KEY (id_user) REFERENCES [User](id_unic),  -- Foreign key to User table
+    CONSTRAINT FK_TipMT FOREIGN KEY (id_tip_MTC) REFERENCES TipMT(id_unic) -- Foreign key to TipMT table
+);
+
 GO
 
 -- Creare tabel Traseu

@@ -17,6 +17,12 @@ namespace WpfApp
         {
             MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
             
+            // Do not render the button if it is already rendered
+            if (mainWindow.MainContent.Content?.GetType() == pageType)
+            {
+                // If the requested page is already displayed, do nothing
+                return;
+            }
             // Dynamically create an instance of the specified UserControl type
             if (Activator.CreateInstance(pageType) is UserControl pageInstance)
             {
@@ -38,8 +44,9 @@ namespace WpfApp
             if(Login.connected)
             {
                 Login.connected=false;
+                // here clear the user credentials 
+                User.LoginDetails.Clear();
                 MessageBox.Show("Log out successfully!");
-                UpdateLoginButton();
             }
             NavigateTo(typeof(Login));          
         }
@@ -51,19 +58,6 @@ namespace WpfApp
                 NavigateTo(typeof(Search));
             else NavigateTo(typeof(Login));
             
-        }
-        public void UpdateLoginButton()
-        {
-            if (Login.connected)
-            {
-                // Change button text to "Log Out"
-                LoginButton.Content = "Log Out";
-            }
-            else
-            {
-                // Change button text back to "Login"
-                LoginButton.Content = "Log in";
-            }
         }
     }
 }

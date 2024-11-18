@@ -23,8 +23,8 @@ namespace WpfApp
             string email = EmailTextBox.Text;
             string password = Password.Text;
             string confirmPassword = Password2.Text;
-            
-            if(password!=confirmPassword)
+
+            if (password != confirmPassword)
             {
                 MessageBox.Show("Incorrect password!");
                 return;
@@ -35,12 +35,12 @@ namespace WpfApp
             if (!Person.Add_Persoana(firstName, lastName, email))
                 return;
             // here just add the user in User by the generated ID from Persoana
-            int id_pers=Person.GetPersonID(firstName, lastName,email);
+            int id_pers = Person.GetPersonID(firstName, lastName, email);
             if (id_pers != -1 && User.AddUser(username, password, id_pers))
             {
                 MessageBox.Show("Registration successfully!");
                 SwitchToLogin();
-            }            
+            }
         }
 
         public bool IsUsernameUnique(string username)
@@ -53,11 +53,11 @@ namespace WpfApp
                 var cmd = new SqlCommand(query, DB_Connect.connect);
                 cmd.Parameters.AddWithValue("@username", username);
                 int count = cmd.ExecuteNonQuery();
-                if(count > 0) return false;
+                if (count > 0) return false;
             }
-            catch(Exception e) 
-            { 
-                MessageBox.Show(e.Message);
+            catch (Exception e)
+            {
+                MessageBox.Show($"{e.Message} in IsUsernameUnique");
             }
             return true;
         }

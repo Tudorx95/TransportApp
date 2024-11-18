@@ -23,9 +23,17 @@ namespace WpfApp
         public VideoPlayerControl()
         {
             InitializeComponent();
+            videoPlayer.MediaEnded += VideoPlayer_MediaEnded;
             //videoPlayer.MediaFailed += VideoPlayer_MediaFailed;
             //videoPlayer.MediaOpened += VideoPlayer_MediaOpened;
         }
+        private void VideoPlayer_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            // Restart the video from the beginning
+            videoPlayer.Position = TimeSpan.Zero;
+            videoPlayer.Play();
+        }
+
         private void VideoPlayer_MediaFailed(object sender, ExceptionRoutedEventArgs e)
         {
             MessageBox.Show("Failed to load video: " + e.ErrorException.Message);

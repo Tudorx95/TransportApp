@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -11,12 +12,43 @@ namespace WpfApp.Components
 {
     class User
     {
+        static protected Dictionary<string, string> login_details = new Dictionary<string, string>{ {"", ""} };
+
+        static public Dictionary<string, string> LoginDetails
+        {
+            get { return login_details; }
+            set { login_details = value; }
+        }
+        static public int getUserID()
+        {
+            if (!DB_Connect.IsDBConnected())
+                return -1;
+            string username = login_details.Keys.FirstOrDefault();
+            string password = login_details.Values.FirstOrDefault();
+            //MessageBox.Show($"{username} {password}");
+            string query = "select top 1 id_unic from [User] where username=@username and password=@password";
+            using (SqlCommand cmd = new SqlCommand(query, DB_Connect.connect))
+            {
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@password", password);
+                try
+                {
+                    // ExecuteScalar to retrieve the single result
+                    object result = cmd.ExecuteScalar();
+                    return result != null ? Convert.ToInt32(result) : -1;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+            return -1;
+        }
         static public bool AddUser(string username, string password, int id_pers)
         {
             if (!DB_Connect.IsDBConnected())
                 return false;
-
-             string query = "INSERT INTO Users (username, password, id_persoana) VALUES (@username, @password, @id_pers)";
+            string query = "INSERT INTO Users (username, password, id_persoana) VALUES (@username, @password, @id_pers)";
 
             SqlCommand command = new SqlCommand(query, DB_Connect.connect);
             command.Parameters.AddWithValue("@username", username);
@@ -31,7 +63,7 @@ namespace WpfApp.Components
             catch (Exception ex)
             {
                 // Handle exception (logging, rethrowing, etc.)
-                Console.WriteLine(ex.Message);
+                Console.WriteLine($"{ex.Message} in AddUser");
             }
             return false;
         }
@@ -39,7 +71,6 @@ namespace WpfApp.Components
         {
             if (!DB_Connect.IsDBConnected())
                 return false;
-
             string query = "select username,password from [User] where username=@username";
             try
             {
@@ -62,7 +93,11 @@ namespace WpfApp.Components
                 reader.Close(); // Ensure the reader is closed
 
                 if (res[0] && res[1])
+                { 
+                    // here store the user credentials 
+                    User.LoginDetails.Add(username, password);
                     return true;
+                }
                 else if (res[0])
                     MessageBox.Show("Incorrect Password!");
                 else
@@ -72,7 +107,6 @@ namespace WpfApp.Components
             {
                 MessageBox.Show(ex.Message);
             }
-
             return false;
         }
     }

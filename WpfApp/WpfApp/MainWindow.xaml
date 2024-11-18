@@ -7,13 +7,16 @@
         mc:Ignorable="d"
         Title="Public Transport App" Height="600" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="197*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
         <!-- Floating Top Navigation Bar -->
-        <local:NavigationBar  x:Name="NavBar" VerticalAlignment="Top"/>
+        <local:NavigationBar  x:Name="NavBar" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
 
         <!-- Main Content Area -->
-        <ContentControl x:Name="MainContent" Margin="0,50,0,0">
+        <ContentControl x:Name="MainContent" Margin="0,50,0,0" Grid.ColumnSpan="2">
             <Grid>
-                <TextBlock Text="Welcome to the Home Page" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <Image Source="C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WPF_App\WpfApp\WpfApp\Images\tram_im.jpg" Width="750" Height="226" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="42,5,0,0"/>
             </Grid>
         </ContentControl>

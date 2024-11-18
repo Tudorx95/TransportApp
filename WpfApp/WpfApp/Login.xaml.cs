@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System.Collections.Generic;
+using System.Data;
 using System.Windows;
 using System.Windows.Controls;
 using WpfApp.Components;
@@ -50,7 +51,8 @@ namespace WpfApp
                 Login.connected = true;
                 // navigate to search window
                 MainWindow mainWindow = new MainWindow();
-                mainWindow.UpdateNavBar();
+                Dictionary<string, string> newLoginDetails = new Dictionary<string, string> { { username, password } };
+                User.LoginDetails = newLoginDetails;
                 NavigationBar.NavigateTo(typeof(Search));
             }
         }
