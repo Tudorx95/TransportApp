@@ -45,7 +45,7 @@ namespace WpfApp
             {
                 Login.connected=false;
                 // here clear the user credentials 
-                User.LoginDetails.Clear();
+                ServiceUser.LoginDetails.Clear();
                 MessageBox.Show("Log out successfully!");
             }
             NavigateTo(typeof(Login));          

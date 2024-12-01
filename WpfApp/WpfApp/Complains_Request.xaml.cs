@@ -27,8 +27,8 @@ namespace WpfApp
         }
         private void SendComplaintButton_Click(object sender, RoutedEventArgs e)
         {
-            string username = User.LoginDetails.FirstOrDefault().ToString();
-            string password = User.LoginDetails.FirstOrDefault().ToString();
+            string username = ServiceUser.LoginDetails.FirstOrDefault().ToString();
+            string password = ServiceUser.LoginDetails.FirstOrDefault().ToString();
             if(username=="" || password=="")
             {
                 MessageBox.Show("Please log in before you submit any complain!");
@@ -46,7 +46,7 @@ namespace WpfApp
                 MessageBox.Show("Please select a service and enter your complaint before submitting.", "Missing Information", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
-            int id_user = User.getUserID();
+            int id_user = ServiceUser.getUserID();
             int id_mtc = MTC.Get_MTC_Type(selectedService);
             if(id_user == -1)
             { 

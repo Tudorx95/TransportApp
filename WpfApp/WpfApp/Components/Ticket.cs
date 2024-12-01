@@ -103,7 +103,7 @@ namespace WpfApp.Components
         {
             total_Price = ticket_price * ticket_count;
             determine_Time();
-            int id_user = User.getUserID();
+            int id_user = ServiceUser.getUserID();
             if(id_user==-1)
             {
                 MessageBox.Show($"You are not logged in!");

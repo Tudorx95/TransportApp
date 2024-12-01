@@ -45,16 +45,17 @@ namespace WpfApp
             //string encryptedPassword = Crypt.Encrypt(password);
             // verify the integrity of the password
 
-            if (User.Exist_User(username,password))
+            if (ServiceUser.Exist_User(username,password))
             {
                 // set connected state to true
                 Login.connected = true;
                 // navigate to search window
                 MainWindow mainWindow = new MainWindow();
                 Dictionary<string, string> newLoginDetails = new Dictionary<string, string> { { username, password } };
-                User.LoginDetails = newLoginDetails;
+                ServiceUser.LoginDetails = newLoginDetails;
                 NavigationBar.NavigateTo(typeof(Search));
             }
+            NavigationBar.NavigateTo(typeof(Search)); //added by me 
         }
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)

@@ -37,6 +37,13 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.9.0\lib\net462\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Device.Portable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3f6d3f5f65b761a0, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Device.Location.Portable.1.0.0\lib\System.Device.Portable.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -49,18 +56,50 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WpfAnimatedGif, Version=2.0.0.0, Culture=neutral, PublicKeyToken=9e7cd3b544a090dc, processorArchitecture=MSIL">
+      <HintPath>..\packages\WpfAnimatedGif.2.0.2\lib\net40\WpfAnimatedGif.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Complains_Request.xaml.cs">
+      <DependentUpon>Complains_Request.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\DB_Connect.cs" />
+    <Compile Include="Components\ServiceUser.cs" />
+    <Compile Include="DataClasses1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Pupils_Free.xaml.cs">
+      <DependentUpon>Pupils_Free.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
     <Compile Include="Search.xaml.cs">
       <DependentUpon>Search.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SearchRoute.xaml.cs">
+      <DependentUpon>SearchRoute.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StudentFacilities.xaml.cs">
+      <DependentUpon>StudentFacilities.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket_Subscription_Info.xaml.cs">
+      <DependentUpon>Ticket_Subscription_Info.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VideoPlayerControl.xaml.cs">
+      <DependentUpon>VideoPlayerControl.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Complains_Request.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Home.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -102,11 +141,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Pupils_Free.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Register.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Search.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SearchRoute.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StudentFacilities.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ticket_Subscription_Info.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VideoPlayerControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -132,6 +191,16 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="DataClasses1.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataClasses1.dbml.layout">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -168,10 +237,49 @@
     <Resource Include="Images\default_map.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\autobuz_100.png" />
+    <Resource Include="Images\default_map_new.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\default_map_new.png" />
+    <Resource Include="Images\Home_Images\bus1.gif" />
+    <Resource Include="Images\Home_Images\bus2.gif" />
+    <Resource Include="Images\Home_Images\bus3.gif" />
+    <Resource Include="Images\Home_Images\bus4.gif" />
+    <Resource Include="Images\Home_Images\bus5.gif" />
+    <Resource Include="Images\Home_Images\bus6.gif" />
+    <Resource Include="Images\Home_Images\Home_LeftSide_Bar.png" />
+    <Resource Include="Images\Home_Images\Home_LeftSide_Bar2.png" />
+    <Resource Include="Images\Home_Images\Pupils_Facilities_Background.jpg" />
+    <Resource Include="Images\Home_Images\Student_Facilities_Background.jpg" />
+    <Resource Include="Images\Home_Images\tram4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Logo_bus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logoSTB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\wallpaper_p1.jpg" />
+    <Resource Include="Images\wallpaper2.jpg" />
+    <Resource Include="Images\wallpaper_new.jpg" />
+    <Resource Include="Images\wallpaper1.jpg" />
+    <Resource Include="Images\default_map1.png" />
+    <Resource Include="Images\Autobuz_101.png" />
+    <Content Include="Images\bus_video.mp4" />
+    <Content Include="Images\metro_video.mp4" />
+    <Resource Include="Images\simple_map.png" />
+    <Content Include="Images\tram_video.mp4" />
+    <Resource Include="Images\umbrelas.jpg" />
+    <Content Include="Images\video_ceva.mp4" />
+    <Resource Include="Images\bus_gif.gif" />
+    <Content Include="Images\PublicTransport.mp4" />
+    <Resource Include="Images\tram3.gif" />
+    <Resource Include="Images\tram2.gif" />
+    <Resource Include="Images\tram1.gif" />
+    <Resource Include="Images\Road.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

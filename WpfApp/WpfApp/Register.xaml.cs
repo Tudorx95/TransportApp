@@ -36,7 +36,7 @@ namespace WpfApp
                 return;
             // here just add the user in User by the generated ID from Persoana
             int id_pers = Person.GetPersonID(firstName, lastName, email);
-            if (id_pers != -1 && User.AddUser(username, password, id_pers))
+            if (id_pers != -1 && ServiceUser.AddUser(username, password, id_pers))
             {
                 MessageBox.Show("Registration successfully!");
                 SwitchToLogin();

@@ -10,32 +10,119 @@ namespace WpfApp
 {
     public partial class Search : UserControl
     {
-        // Sample data for suggestions
-        private List<string> sampleSuggestions = new List<string>
+        private List<string> sampleSuggestions = new List<string>();
+        private Dictionary<string, string> videoMappings = new Dictionary<string, string>();
+        private Dictionary<string, (string LeftImage, List<StationArrival> Arrivals)> routeData = new Dictionary<string, (string, List<StationArrival>)>();
+        private void LoadVideoMappings()
         {
-            "Autobuz nr. 100", "Autobuzul nr. 101", "Autobuzul nr. 102",
-            "Tramvai nr. 10", "Tramvai nr. 11", "Tramvai nr. 12",
-            "Metrou"
-        };
+            using (var context = new DataClasses1DataContext())
+            {
+                // Load transport types from the TipMT table
+                // Obține combinația "Tip Transport" și "Număr MT"
+                var transportTypes = from tip in context.TipMTs
+                                     join mt in context.MTs on tip.id_unic equals mt.id_tip
+                                     select new
+                                     {
+                                         nume = tip.nume + " nr. " + mt.numar_mt
+                                     };
 
-        // Route images and stations for each transport type
-        private Dictionary<string, (string LeftImage, List<StationArrival> Arrivals)> routeData = new Dictionary<string, (string, List<StationArrival>)>
+                foreach (var transportType in transportTypes)
+                {
+                    // Define video paths based on transport type names
+                    string videoPath = transportType.nume.Contains("Tramvai")
+                        ? $"C:\\Users\\razva\\Desktop\\ABDApp\\TransportApp\\WpfApp\\WpfApp\\Images\\tram_video.mp4"
+                        : transportType.nume.Contains("Autobuz")
+                        ? $"C:\\Users\\razva\\Desktop\\ABDApp\\TransportApp\\WpfApp\\WpfApp\\Images\\bus_video.mp4"
+                        : transportType.nume.Contains("Metro")
+                        ? $"C:\\Users\\razva\\Desktop\\ABDApp\\TransportApp\\WpfApp\\WpfApp\\Images\\metro_video.mp4"
+                        : null; // Fallback for undefined transport types
+
+                    if (videoPath != null)
+                    {
+                        // Add mapping to dictionary
+                        videoMappings.Add(transportType.nume, videoPath);
+                    }
+                }
+            }
+        }
+
+        public void LoadSuggestionsFromDatabase()
         {
-            { "Tramvai nr. 10", ("Images/default_map_new.png", new List<StationArrival> { new StationArrival("Station A", new List<string> { "10:00", "10:15", "10:30" }),
-                                                                          new StationArrival("Station B", new List<string> { "10:05", "10:20", "10:35" }),
-                                                                          new StationArrival("Station C", new List<string> { "10:10", "10:25", "10:40" }) }) },
-            { "Tramvai nr. 11", ("Images/Route11_Left.jpg", new List<StationArrival> { new StationArrival("Station D", new List<string> { "11:00", "11:15", "11:30" }),
-                                                                          new StationArrival("Station E", new List<string> { "11:05", "11:20", "11:35" }),
-                                                                          new StationArrival("Station F", new List<string> { "11:10", "11:25", "11:40" }) }) },
-            { "Autobuz nr. 100", ("Images/autobuz_100.png", new List<StationArrival> { new StationArrival("Station G", new List<string> { "12:00", "12:15", "12:30" }),
-                                                                          new StationArrival("Station H", new List<string> { "12:05", "12:20", "12:35" }),
-                                                                          new StationArrival("Station I", new List<string> { "12:10", "12:25", "12:40" }) }) }
-            // Add more routes here as needed
-        };
+            var context = new DataClasses1DataContext();
+            var suggestions = from tip in context.TipMTs
+                              join mt in context.MTs on tip.id_unic equals mt.id_tip
+                              select tip.nume + " nr. " + mt.numar_mt;  // Combina transportul cu numărul MT
+
+            sampleSuggestions.Clear();
+            sampleSuggestions.AddRange(suggestions);
+        }
+
+        private void LoadRouteDataFromDatabase()
+        {
+            using (var context = new DataClasses1DataContext())
+            {
+                // Dicționar cu imagini pentru fiecare număr MT
+                var imageMappings = new Dictionary<int, string>
+                {
+                    { 101, "Images/autobuz_101.png" },
+                    { 102, "Images/autobuz_102.png" },
+                    { 103, "Images/autobuz_103.png" },
+                    { 10, "Images/tramvai_10.png" },
+                    { 11, "Images/tramvai_11.png" },
+                    { 12, "Images/tramvai_12.png" },
+                    { 1, "Images/metrou.png" }
+                };  
+
+                // Obține combinația "Tip Transport" și "Număr MT"
+                var transportTypes = from tip in context.TipMTs
+                                     join mt in context.MTs on tip.id_unic equals mt.id_tip
+                                     select new
+                                     {
+                                         TransportName = tip.nume + " nr. " + mt.numar_mt, // Exemplu: "Autobuz nr. 101"
+                                         TransportType = tip.nume,
+                                         NumarMT = mt.numar_mt,
+                                         IdTraseu = mt.nr_traseu // Folosit pentru sosiri
+                                     };
+
+                // Curăță datele anterioare
+                routeData.Clear();
+
+                foreach (var transportType in transportTypes)
+                {
+                    // Extrage datele despre sosiri pentru fiecare traseu
+                    var arrivals = (from statie in context.Staties
+                                    join tipStatie in context.Tip_Staties on statie.id_tip_statie equals tipStatie.id_unic
+                                    where statie.id_traseu == transportType.IdTraseu
+                                    select new StationArrival(
+                                        tipStatie.nume,           // Numele stației
+                                        statie.ore.Split(' ').ToList() // Orele sosirilor ca listă
+                                    )).ToList();
+
+                    // Construiește calea pentru imagine
+                    string imagePath;
+                    if (imageMappings.ContainsKey(transportType.NumarMT))
+                    {
+                        imagePath = imageMappings[transportType.NumarMT];
+                    }
+                    else
+                    {
+                        // Dacă nu există o imagine specifică pentru numărul MT, folosește o imagine implicită
+                        imagePath = "Images/default_transport.png";
+                    }
+
+                    // Adaugă la datele rutei
+                    routeData.Add(transportType.TransportName, (imagePath, arrivals));
+                }
+            }
+        }
 
         public Search()
         {
+            LoadSuggestionsFromDatabase();
+            LoadRouteDataFromDatabase(); // Load route data from the database
             InitializeComponent();
+            LoadVideoMappings();
+            Media.Play();
             LeftImage.MouseLeftButtonUp += LeftImage_MouseLeftButtonUp;
         }
 
@@ -56,12 +143,12 @@ namespace WpfApp
         {
             string input = SearchTextBox.Text;
 
-            // Filter suggestions to only include those that start with the user's input
+            // Filtrăm sugestiile pentru a include doar acelea care încep cu input-ul utilizatorului
             var filteredSuggestions = sampleSuggestions
                 .Where(suggestion => suggestion.StartsWith(input, StringComparison.InvariantCultureIgnoreCase))
                 .ToList();
 
-            // Update the ListBox with filtered suggestions
+            // Actualizăm ListBox-ul cu sugestiile filtrate
             SuggestionsListBox.ItemsSource = filteredSuggestions;
             SuggestionsListBox.Visibility = filteredSuggestions.Any() ? Visibility.Visible : Visibility.Collapsed;
         }
@@ -89,8 +176,8 @@ namespace WpfApp
                     // Set visibility for RouteDisplay
                     RouteDisplay.Visibility = Visibility.Visible; // Show the RouteDisplay
 
-                    // Optionally set the content of the RouteDisplay, like station names
-                    StationsList.Text = string.Join(", ", routeInfo.Arrivals.Select(a => a.StationName));
+                    // Dynamically set the video source
+                    SetVideoSource(selectedSuggestion);
                 }
                 else
                 {
@@ -99,7 +186,10 @@ namespace WpfApp
                     LeftImage.Visibility = Visibility.Collapsed;
                     StationsDataGrid.Visibility = Visibility.Collapsed;
                     RouteDisplay.Visibility = Visibility.Collapsed; // Hide the RouteDisplay
+
+                    Media.Source = null; // Stop video if no transport type is selected
                 }
+
             }
         }
 
@@ -120,6 +210,34 @@ namespace WpfApp
             ImagePopup.IsOpen = false;
         }
 
+        private void SetVideoSource(string transportType)
+        {
+            // Check if the transportType exists in the videoMappings dictionary
+            if (videoMappings.TryGetValue(transportType, out string videoPath))
+            {
+                Media.Source = new Uri(videoPath); // Set the MediaElement source to the video
+                Media.Play(); // Automatically start playing the video
+            }
+            else
+            {
+                // Handle case where no video is found for the transport type
+                Media.Source = null;
+                MessageBox.Show($"No video available for transport type: {transportType}");
+            }
+        }
+
+        private void Media_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            // Optionally handle media ended event
+            Media.Position = TimeSpan.Zero; // Reset to the beginning if needed
+            Media.Play(); // Restart playback if desired
+        }
+        private void FindPathButton_Click(object sender, RoutedEventArgs e)
+        {
+            SearchRoute newWindow = new SearchRoute();
+            newWindow.Show();
+            //MessageBox.Show("Finding path to destination...");
+        }
 
         // Class to represent station arrival times
         public class StationArrival

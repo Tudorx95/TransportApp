@@ -40,7 +40,7 @@ namespace WpfApp
         {
             base.OnClosing(e);
 
-            User.LoginDetails.Clear();
+            ServiceUser.LoginDetails.Clear();
             // Close the database connection
             if (DB_Connect.connect!= null && DB_Connect.connect.State == System.Data.ConnectionState.Open)
             {
