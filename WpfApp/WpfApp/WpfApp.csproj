@@ -231,15 +231,6 @@
     <Resource Include="Images\wallpaper.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\map2_jpg.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\default_map.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\default_map_new.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\Home_Images\bus1.gif" />
     <Resource Include="Images\Home_Images\bus2.gif" />
     <Resource Include="Images\Home_Images\bus3.gif" />
@@ -266,6 +257,14 @@
     <Resource Include="Images\default_map1.png" />
     <Resource Include="Images\Autobuz_101.png" />
     <Content Include="Images\bus_video.mp4" />
+    <Resource Include="Images\Maps\autobuz101.png" />
+    <Resource Include="Images\Maps\autobuz102.png" />
+    <Resource Include="Images\Maps\autobuz103.png" />
+    <Resource Include="Images\Maps\default_map_new.png" />
+    <Resource Include="Images\Maps\metrou1.png" />
+    <Resource Include="Images\Maps\tramvai10.png" />
+    <Resource Include="Images\Maps\tramvai11png.png" />
+    <Resource Include="Images\Maps\tramvai12.png" />
     <Content Include="Images\metro_video.mp4" />
     <Resource Include="Images\simple_map.png" />
     <Content Include="Images\tram_video.mp4" />

@@ -72,14 +72,14 @@ namespace WpfApp
                     {
                         ShowDistance(clickedPoint);
                         startingPoint = clickedPoint;
-                        AddPinPoint(clickedPoint); // Pin pentru plecare
+                        AddPinPoint(clickedPoint); // pin pentru plecare
                         InstructionTextBlock.Text = "Please select the destination location.";
                     }
                     else if (destinationPoint == null)
                     {
                         ShowDistance(clickedPoint);
                         destinationPoint = clickedPoint;
-                        AddPinPoint(clickedPoint); // Pin pentru destinație
+                        AddPinPoint(clickedPoint); // pin pentru destinatie
                         InstructionTextBlock.Text = "Both locations already selected.";
                     }
                     else
@@ -89,7 +89,7 @@ namespace WpfApp
                     }
                 }
             }
-            // Once both points are selected, show the "Generate my route!" button
+            // genereaza ruta 
             if (startingPoint.HasValue && destinationPoint.HasValue)
             {
                 GenerateRouteButton.Visibility = Visibility.Visible;
@@ -101,7 +101,6 @@ namespace WpfApp
             destinationPoint = null;
             PinCanvas.Children.Clear();
             InstructionTextBlock.Text = "Please select the starting location.";
-            //MessageBox.Show("Selection reset. You can select new locations.");
         }
         private void ResetButton_Click(object sender, RoutedEventArgs e)
         {
@@ -129,14 +128,13 @@ namespace WpfApp
 
             message += "\nDo you want to select this location?";
 
-            // Display a MessageBox with Yes and No options
             MessageBoxResult result = MessageBox.Show(message, "Confirm Location", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
         }
 
         private void MapImage_MouseEnter(object sender, MouseEventArgs e)
         {
-            this.Cursor = Cursors.Cross; // Sau Cursors.Hand, sau altă opțiune
+            this.Cursor = Cursors.Cross; 
         }
 
         private void MapImage_MouseLeave(object sender, MouseEventArgs e)
@@ -146,9 +144,7 @@ namespace WpfApp
 
         private void MapImage_MouseMove(object sender, MouseEventArgs e)
         {
-            // Get the mouse position relative to the image
             Point mousePosition = e.GetPosition(MapImage);
-            // Show mouse coordinates in the title bar
             CoordinatesTextBlock.Text = $"Mouse Position: {mousePosition.X:F2}, {mousePosition.Y:F2}";
         }
 
@@ -159,26 +155,23 @@ namespace WpfApp
 
         private void AddPinPoint(Point clickedPoint)
         {
-            // Crează o elipsă care să reprezinte pin-ul
             Ellipse pin = new Ellipse
             {
                 Width = 20,
                 Height = 20,
-                Fill = Brushes.Red, // Culoarea pin-ului
+                Fill = Brushes.Red,
                 Stroke = Brushes.Black,
                 StrokeThickness = 1
             };
 
-            // Adaugă elipsa pe Canvas
             PinCanvas.Children.Add(pin);
 
-            // Setează poziția pin-ului în Canvas
             Canvas.SetLeft(pin, clickedPoint.X - (pin.Width / 2));
             Canvas.SetTop(pin, clickedPoint.Y - (pin.Height / 2));
         }
         private void GenerateRouteButton_Click(object sender, RoutedEventArgs e)
         {
-            RouteDisplayPanel.Children.Clear(); // Curăță afișajul anterior
+            RouteDisplayPanel.Children.Clear();
 
             var startStations = stations
                 .Select(station => new
@@ -200,7 +193,7 @@ namespace WpfApp
                 .Take(3)
                 .ToList();
 
-            var routeSet = new HashSet<string>(); // Păstrează rutele unice
+            var routeSet = new HashSet<string>(); 
             bool routeFound = false;
 
             foreach (var startStation in startStations)
@@ -217,7 +210,6 @@ namespace WpfApp
                         {
                             routeFound = true;
 
-                            // Adaugă un titlu pentru fiecare rută găsită
                             TextBlock routeTitle = new TextBlock
                             {
                                 Text = $"Route from {startStation.Station.Name} to {destinationStation.Station.Name}",
@@ -228,7 +220,6 @@ namespace WpfApp
                             };
                             RouteDisplayPanel.Children.Add(routeTitle);
 
-                            // Afișează stațiile din rută
                             foreach (var station in route)
                             {
                                 TextBlock stationText = new TextBlock
@@ -244,7 +235,6 @@ namespace WpfApp
                 }
             }
 
-            // Calculează și afișează distanța de mers pe jos între punctele de start și destinație
             double walkingDistance = CalculateDistance(startingPoint.Value, destinationPoint.Value);
             TextBlock walkingDistanceText = new TextBlock
             {
@@ -262,7 +252,7 @@ namespace WpfApp
         {
             using (var context = new DataClasses1DataContext())
             {
-                // 1. Căutăm ID-ul unic al stațiilor folosind numele acestora
+                // 1. cautam id-ul unic al statiilor
                 var startStation = (from tip in context.Tip_Staties
                                     where tip.nume == startStationName
                                     select tip).FirstOrDefault();
@@ -277,7 +267,7 @@ namespace WpfApp
                     return null;
                 }
 
-                // 2. Obținem traseele care conțin fiecare stație
+                // 2. obtinem traseele ce contin fiecare statie
                 var startStationRoutes = (from statie in context.Staties
                                           where statie.id_tip_statie == startStation.id_unic
                                           select statie).ToList();
@@ -286,7 +276,7 @@ namespace WpfApp
                                         where statie.id_tip_statie == endStation.id_unic
                                         select statie).ToList();
 
-                // 3. Căutăm intersecțiile dintre traseele stațiilor de început și de sfârșit
+                // 3. cautam intersectiile dintre trasee daca sunt
                 var intersectingRoutes = startStationRoutes
                     .Where(startRoute => endStationRoutes
                         .Any(endRoute => endRoute.id_traseu == startRoute.id_traseu))
@@ -303,7 +293,7 @@ namespace WpfApp
 
                 foreach (var routeId in intersectingRoutes)
                 {
-                    // 4. Obținem stațiile pentru traseul curent și le ordonăm
+                    // 4. obtinem statiile pentru traseul curent si le ordonam
                     var stationsOnRoute = (from statie in context.Staties
                                            where statie.id_traseu == routeId
                                            orderby statie.id_unic
@@ -313,36 +303,32 @@ namespace WpfApp
                                                Name = statie.Tip_Statie.nume
                                            }).ToList();
 
-                    // Găsim pozițiile stațiilor de start și end
                     int startIndex = stationsOnRoute.FindIndex(s => s.Name == startStationName);
                     int endIndex = stationsOnRoute.FindIndex(s => s.Name == endStationName);
 
                     if (startIndex == -1 || endIndex == -1) continue;
 
-                    // 5. Creăm lista în funcție de direcție
+                    // 5. creeam lista in fucntie de directie
                     List<StationInfo> directRoute;
                     List<StationInfo> circularRoute;
 
                     if (startIndex <= endIndex)
                     {
-                        // Direcția directă (ex: 2 -> 3 -> 4)
                         directRoute = stationsOnRoute.Skip(startIndex).Take(endIndex - startIndex + 1).ToList();
                     }
                     else
                     {
-                        // Direcția directă când indexul de început este după indexul de sfârșit
                         directRoute = stationsOnRoute.Skip(startIndex).Concat(stationsOnRoute.Take(endIndex + 1)).ToList();
                     }
 
-                    // Direcția circulară (ex: 3 -> 4 -> 5 -> 1 -> 2)
                     circularRoute = stationsOnRoute.Skip(startIndex)
                                                    .Concat(stationsOnRoute.Take(startIndex == 0 ? 0 : endIndex + 1))
                                                    .ToList();
 
-                    // Alegem ruta cea mai scurtă
+                    // o alegem pe cea mai scurta 
                     var candidateRoute = directRoute.Count <= circularRoute.Count ? directRoute : circularRoute;
 
-                    // 6. Actualizăm ruta cea mai scurtă
+                    // 6. actualizam ruta cea mai scurta 
                     if (shortestRoute == null || candidateRoute.Count < shortestRoute.Count)
                     {
                         shortestRoute = candidateRoute;
@@ -354,7 +340,7 @@ namespace WpfApp
                     return null;
                 }
 
-                // Afișăm traseul găsit
+                // afisam traseul gasit in consola //debug :)
                 foreach (var station in shortestRoute)
                 {
                     Console.WriteLine($"Stație: {station.Name}");
