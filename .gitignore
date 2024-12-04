@@ -1,1 +1,5 @@
 WpfApp/.vs/
+*.obj
+*.bin
+*.exe
+*.pdb
