@@ -37,3 +37,4 @@ by reffering the tables as classes and implementing specific methods to manage t
 To run the project just take the next steps:
 - clone the project repository using: git clone <repo_link>
 - modify the connection string from ...
+- modify the primary video path from VideoPlayerControl.xaml.cs file in two places
