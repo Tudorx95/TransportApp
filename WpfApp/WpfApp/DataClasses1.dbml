@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TransportDB" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-6U3DKNPP\SQLEXPRESS;Initial Catalog=TransportDB;Integrated Security=True;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="WpfApp.Properties.Settings" SettingsPropertyName="TransportDBConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-LT\SQLEXPRESS;Initial Catalog=TransportDB;Persist Security Info=True;User ID=TransportApp;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="WpfApp.Properties.Settings" SettingsPropertyName="TransportDBConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Angajat" Member="Angajats">
     <Type Name="Angajat">
       <Column Name="id_unic" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />

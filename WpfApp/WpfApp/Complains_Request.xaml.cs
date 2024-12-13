@@ -61,32 +61,24 @@ namespace WpfApp
         }
         public void Insert_Complain(int id_user,string text,int id_MTC_type,string selectedService)
         {
-            if (!DB_Connect.IsDBConnected())
-                return;
-            string query = "INSERT INTO Complaint (id_user, text_plangere, id_tip_MTC) " +
-                  "VALUES (@id_user, @text, @id_MTC_type)";
-
+            var context = new DataClasses1DataContext();
             try
             {
-                using (SqlCommand cmd = new SqlCommand(query, DB_Connect.connect))
+                // Create a new Complaint object and set its properties
+                var newComplaint = new Complaint
                 {
-                    // Add parameters to the command
-                    cmd.Parameters.AddWithValue("@id_user", id_user);
-                    cmd.Parameters.AddWithValue("@text", text);
-                    cmd.Parameters.AddWithValue("@id_MTC_type", id_MTC_type);
+                    id_user = id_user,
+                    text_plangere = text,
+                    id_tip_MTC = id_MTC_type
+                };
 
-                    // Execute the query
-                    int rowsAffected = cmd.ExecuteNonQuery();
+                // Insert the new Complaint object into the table
+                context.Complaints.InsertOnSubmit(newComplaint);
 
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show($"Your complaint about {selectedService} has been sent!", "Complaint Submitted", MessageBoxButton.OK);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Failed to submit the complaint.");
-                    }
-                }
+                // Submit changes to the database
+                context.SubmitChanges();
+
+                MessageBox.Show($"Your complaint about {selectedService} has been sent!", "Complaint Submitted", MessageBoxButton.OK);
             }
             catch (Exception ex)
             {

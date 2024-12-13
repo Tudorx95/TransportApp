@@ -13,47 +13,17 @@ namespace WpfApp.Components
         public MTC() { }
         static public int Get_MTC_Type(string type)
         {
-            if (!DB_Connect.IsDBConnected())
-                return -1;
-            string query = "SELECT id_unic, nume FROM TipMT";
-            try
-            {
-                using (SqlCommand cmd = new SqlCommand(query, DB_Connect.connect))
-                {
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        // Iterate through the results
-                        while (reader.Read())
-                        {
-                            // Compare the 'nume' column with the parameter 'type'
-                            string dbType = reader["nume"].ToString();
+            var context = new DataClasses1DataContext();
 
-                            // If the names match, return the id_unic
-                            if (type.Contains("Bus") && dbType.Equals("Autobuz"))
-                            {
-                                return Convert.ToInt32(reader["id_unic"]);
-                            }
-                            if (type.Contains("Tram") && dbType.Equals("Tramvai"))
-                            {
-                                return Convert.ToInt32(reader["id_unic"]);
-                            }
-                            if (type.Contains("Trolleybus") && dbType.Equals("Troleibuz"))
-                            {
-                                return Convert.ToInt32(reader["id_unic"]);
-                            }
-                            if (type.Contains("Subway") && dbType.Equals("Metrou"))
-                            {
-                                return Convert.ToInt32(reader["id_unic"]);
-                            }
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"{ex.Message} in Get_MTC_Type");
-            }
-            return -1;
+            // Query TipMT table to find a match based on the provided type
+            var result = context.TipMTs
+                                .Where(t => (type.Contains("Bus") && t.nume.Equals("Autobuz")) ||
+                                           (type.Contains("Tram") && t.nume.Equals("Tramvai")) ||
+                                           (type.Contains("Trolleybus") && t.nume.Equals("Troleibuz")) ||
+                                           (type.Contains("Subway") && t.nume.Equals("Metrou")))
+                                .Select(t => t.id_unic)
+                                .FirstOrDefault();
+            return result != 0 ? result : -1;
         }
     }
 }

@@ -4,13 +4,6 @@
              Height="500" Width="2000"
              HorizontalAlignment="Stretch"
              VerticalAlignment="Stretch">
-    <MediaElement x:Name="videoPlayer"
-                  Source="C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WpfApp\WpfApp\Images\PublicTransport.mp4"
-                  LoadedBehavior="Play"
-                  UnloadedBehavior="Stop"
-                  Stretch="Uniform"
-                  HorizontalAlignment="Stretch"
-                  VerticalAlignment="Stretch"
-                  MediaEnded="VideoPlayer_MediaEnded"/>
-    
+    <MediaElement x:Name="videoPlayer" LoadedBehavior="Manual" MediaEnded="VideoPlayer_MediaEnded" />
+
 </UserControl>

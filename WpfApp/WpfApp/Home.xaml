@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:components="clr-namespace:WpfApp.Components"
         mc:Ignorable="d"
         Height="755" Width="1588">
 
@@ -65,40 +66,43 @@
 
         <!--<local:VideoPlayerControl Panel.ZIndex="0" VerticalAlignment="Top" Margin="-206,75,-206,0" Height="680"/>-->
 
-        <MediaElement x:Name="videoPlayer"
-                  Source="C:\Users\razva\Desktop\ABDApp\TransportApp\WpfApp\WpfApp\Images\PublicTransport.mp4"
-                  LoadedBehavior="Play"
-                  UnloadedBehavior="Manual"
-                  Stretch="Uniform"
-                  HorizontalAlignment="Stretch"
-                  VerticalAlignment="Stretch"/>
+        <local:VideoPlayerControl Panel.ZIndex="0" VerticalAlignment="Top" Margin="-206,75,-206,0" Height="680"/>
 
         <Grid HorizontalAlignment="Stretch" Height="155" VerticalAlignment="Top" Margin="-36,-41,0,0" Width="1624" Panel.ZIndex="1">
             <Grid.Background>
-                <ImageBrush ImageSource="Images/Road.jpg"/>
+                <ImageBrush ImageSource="{Binding Source={x:Static components:Resource.Road_jpg}}"/>
             </Grid.Background>
 
             <!-- Main Content Area -->
             <ContentControl x:Name="MainContent" Margin="-24,-26,24,26">
                 <Grid Margin="10,110,-10,-111" >
-                    <!--<DataGrid x:Name="PersonsDataGrid" Margin="0,40,10,0" AutoGenerateColumns="True"/>-->
                     <!--Canvas for Traffic Animation-->
                     <Canvas x:Name="BusCanvas" HorizontalAlignment="Left" VerticalAlignment="Top" Width="2076" Height="106" Margin="-189,-15,0,0" Panel.ZIndex="1">
-                        <Image x:Name="Bus1" Source="Images/Home_Images/bus1.gif" Width="100" Height="100" Canvas.Top="10" Canvas.Left="10"/>
-                        <Image x:Name="Bus2" Source="Images/Home_Images/bus2.gif" Width="100" Height="100" Canvas.Top="-1" Canvas.Left="4" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                        <Image x:Name="Bus3" Source="Images/Home_Images/bus3.gif" Width="100" Height="100" Canvas.Left="10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                        <Image x:Name="Bus4" Source="Images/Home_Images/bus4.gif" Width="100" Height="77" Canvas.Left="4" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="44"/>
-                        <Image x:Name="Bus5" Source="Images/Home_Images/bus5.gif" Width="157" Height="109" Canvas.Left="1" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="47"/>
+                        <Image x:Name="Bus1"  Source="{Binding Source={x:Static components:Resource.Bus1Path}}"
+                               Width="100" Height="100" Canvas.Top="10" Canvas.Left="10"/>
+                        <Image x:Name="Bus2" Source="{Binding Source={x:Static components:Resource.Bus2Path}}"
+                               Width="100" Height="100" Canvas.Top="-1" Canvas.Left="4" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <Image x:Name="Bus3" Source="{Binding Source={x:Static components:Resource.Bus3Path}}"
+                               Width="100" Height="100" Canvas.Left="10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <Image x:Name="Bus4" Source="{Binding Source={x:Static components:Resource.Bus4Path}}"
+                               Width="100" Height="77" Canvas.Left="4" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="44"/>
+                        <Image x:Name="Bus5" Source="{Binding Source={x:Static components:Resource.Bus5Path}}"
+                               Width="157" Height="109" Canvas.Left="1" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="47"/>
                     </Canvas>
                     <Canvas x:Name="BusCanvasReverse" HorizontalAlignment="Left" VerticalAlignment="Top" Width="2074" Height="106" Margin="-276,-46,0,0" Panel.ZIndex="0">
-                        <Image x:Name="Bus01" Source="Images/Home_Images/bus6.gif" Width="100" Height="100" Canvas.Top="11" Canvas.Left="1986"/>
-                        <Image x:Name="Tram1" Source="Images/Home_Images/tram4.gif" Width="185" Height="71" Canvas.Left="2045" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="42"/>
-                        <Image x:Name="Bus02" Source="Images/Home_Images/bus6.gif" Width="100" Height="100" Canvas.Left="2045" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Top="40"/>
-                        <Image x:Name="Tram2" Source="Images/Home_Images/tram4.gif" Width="185" Height="71" Canvas.Left="2150" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="44"/>
-                        <Image x:Name="Bus03" Source="Images/Home_Images/bus6.gif" Width="100" Height="100" Canvas.Left="2100" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Top="40"/>
+                        <Image x:Name="Bus01" Source="{Binding Source={x:Static components:Resource.Bus6Path}}"
+                               Width="100" Height="100" Canvas.Top="11" Canvas.Left="1986"/>
+                        <Image x:Name="Tram1" Source="{Binding Source={x:Static components:Resource.tram4_gif}}"
+                               Width="185" Height="71" Canvas.Left="2045" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="42"/>
+                        <Image x:Name="Bus02" Source="{Binding Source={x:Static components:Resource.Bus6Path}}"
+                               Width="100" Height="100" Canvas.Left="2045" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Top="40"/>
+                        <Image x:Name="Tram2" Source="{Binding Source={x:Static components:Resource.tram4_gif}}"
+                               Width="185" Height="71" Canvas.Left="2150" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="44"/>
+                        <Image x:Name="Bus03" Source="{Binding Source={x:Static components:Resource.Bus6Path}}"
+                               Width="100" Height="100" Canvas.Left="2100" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Top="40"/>
                     </Canvas>
 
-                    <Border x:Name="BotBar" Background="Green" Height="26" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Margin="37,0,-37,-558">
+                    <Border x:Name="BotBar" Background="Green" Height="35" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Margin="37,0,-37,-558">
                         <Canvas x:Name="BottomBar" HorizontalAlignment="Left" VerticalAlignment="Top">
                             <TextBlock x:Name="NewsTextBlock" 
                    Foreground="White" 
@@ -117,9 +121,9 @@
         </Grid>
 
         <Grid x:Name="LeftGrid" Margin="0,119,1398,25">
-            <ListBox Margin="0,-6,0,0" >
+            <ListBox Margin="0,-6,0,0">
                 <ListBox.Background>
-                    <ImageBrush ImageSource="C:\Users\razva\Desktop\ABDApp\TransportApp\WpfApp\WpfApp\Images\Home_Images\Home_LeftSide_Bar2.png"/>
+                    <ImageBrush ImageSource="{Binding Source={x:Static components:Resource.Home_LeftSide_Bar2}}"/>
                 </ListBox.Background>
                 <ListBox.ItemTemplate>
                     <DataTemplate>
@@ -138,9 +142,9 @@
         </Grid>
 
 
-        <Grid x:Name="RightGrid" Margin="1400,0,10,0">
+        <Grid x:Name="RightGrid" Margin="1381,0,29,0">
             <Grid.Background>
-                <ImageBrush ImageSource="C:\Users\razva\Desktop\ABDApp\TransportApp\WpfApp\WpfApp\Images\Home_Images\Home_LeftSide_Bar2.png"
+                <ImageBrush ImageSource="{Binding Source={x:Static components:Resource.Home_LeftSide_Bar2}}"
                     Stretch="UniformToFill"/>
             </Grid.Background>
         </Grid>

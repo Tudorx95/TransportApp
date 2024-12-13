@@ -12,82 +12,69 @@ namespace WpfApp.Components
     {
         static public bool ExistPerson(string firstName, string lastName, string email)
         {
-            if (!DB_Connect.IsDBConnected())
-                return false;
-            string query = "select count(*) from Persoana where nume=@firstName and prenume=@lastName and email=@email";
-            try
-            {
-                SqlCommand command = new SqlCommand(query, DB_Connect.connect);
-                command.Parameters.AddWithValue("@firstName", firstName);
-                command.Parameters.AddWithValue("@lastname", lastName);
-                command.Parameters.AddWithValue("@email", email);
-                int rowsAffected = command.ExecuteNonQuery();
-                if (rowsAffected > 0)
-                    return true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            var context = new DataClasses1DataContext();
+            // Check if the person already exists
+            var pers = context.Persoanas
+                      .FirstOrDefault(p => p.nume == firstName && p.prenume == lastName && p.email == email);
+            if (pers != null)
+                return true;
             return false;
         }
         static public bool Add_Persoana(string firstName, string lastName, string email, int tip_pers = 1)
         {
-            if (!DB_Connect.IsDBConnected())
-                return false;
-
-            if(ExistPerson(firstName,lastName,email))
+            var context = new DataClasses1DataContext();
+            var pers= context.Persoanas.Where(p=> p.nume == firstName && p.prenume == lastName).FirstOrDefault();
+            if(pers != null)
             {
-                MessageBox.Show("Persoana exista deja!");
+                MessageBox.Show($"Person already exists!");
                 return false;
             }
-
-            string query = "INSERT INTO Persoana (tip_persoana,nume,prenume,email) VALUES (@tip_pers,@firstname,@lastname,@email)";
+            var pers2 = new Persoana
+            {
+                nume = firstName,
+                prenume = lastName,
+                tip_persoana = tip_pers,
+                email = email
+            };
+            context.Persoanas.InsertOnSubmit(pers2);
+            context.SubmitChanges();
+            MessageBox.Show("Person inserted succesfully!");
+            return true;
+        }
+        static public void DeletePerson(string firstName,string lastName,  string email, int tip_pers=1)
+        {
             try
             {
-                SqlCommand command = new SqlCommand(query, DB_Connect.connect);
-                command.Parameters.AddWithValue("@tip_pers", tip_pers);
-                command.Parameters.AddWithValue("@firstName", firstName);
-                command.Parameters.AddWithValue("@lastname", lastName);
-                command.Parameters.AddWithValue("@email", email);
-                int rowsAffected = command.ExecuteNonQuery();
-                if (rowsAffected > 0)
-                {
-                    MessageBox.Show("Registration completed successfully!\nNow back to Login");
-                    // After registering, show the Login component again
-                    return true;
-                }
-                else MessageBox.Show("Data not inserted or user exists");
+                var context = new DataClasses1DataContext();
+                var person = context.Persoanas.FirstOrDefault(p => 
+                    p.nume == firstName && p.prenume == lastName && p.email==email && p.tip_persoana==tip_pers);
 
+                if (person != null)
+                {
+                    context.Persoanas.DeleteOnSubmit(person);
+                    context.SubmitChanges();
+                    MessageBox.Show($"Person '{firstName} {lastName}' has been deleted successfully.");
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show($"No person found with the name '{firstName} {lastName}'.");
+                    return;
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show($"Error deleting person: {ex.Message}");
             }
-            return false;
         }
 
         static public int GetPersonID(string firstName,string lastName,string email)
         {
-            if (!DB_Connect.IsDBConnected())
-                return -1;
-            string query = "select id_unic from Persoana where nume=@firstName and prenume=@lastName and email=@email";
-            try
-            {
-                SqlCommand command = new SqlCommand(query, DB_Connect.connect);
-                command.Parameters.AddWithValue("@firstName", firstName);
-                command.Parameters.AddWithValue("@lastName", lastName);
-                command.Parameters.AddWithValue("@email", email);
-                int rowsAffected = (int)command.ExecuteScalar();
-                if (rowsAffected > 0)
-                {
-                    return Convert.ToInt32(rowsAffected);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            var context = new DataClasses1DataContext();
+            var personID = context.Persoanas.FirstOrDefault(p=> p.nume == firstName && p.prenume==lastName 
+                    && p.email==email);
+            if(personID != null)
+                return personID.id_unic;
             return -1;
         }
     }

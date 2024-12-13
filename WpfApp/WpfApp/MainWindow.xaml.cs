@@ -11,7 +11,7 @@ namespace WpfApp
 
         public MainWindow()
         {
-            DB_Connect.connection(".", "TransportDB");
+            //DB_Connect.connection(".", Resource1.DB_Name);
             //MessageBox.Show(DB_Connect.connect.ServerVersion.ToString());
             InitializeComponent();
 
@@ -35,19 +35,6 @@ namespace WpfApp
             {
                 MainContent.Margin = new Thickness(0);
             }
-        }
-        protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
-        {
-            base.OnClosing(e);
-
-            ServiceUser.LoginDetails.Clear();
-            // Close the database connection
-            if (DB_Connect.connect!= null && DB_Connect.connect.State == System.Data.ConnectionState.Open)
-            {
-                DB_Connect.connect.Close();
-                DB_Connect.connect.Dispose();
-            }
-            // Optional: Log or handle other cleanup tasks here
         }
     }
 }

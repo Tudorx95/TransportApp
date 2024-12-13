@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using WpfApp.Components;
@@ -30,35 +31,33 @@ namespace WpfApp
                 return;
             }
             if (!IsUsernameUnique(username))
+            {
+                MessageBox.Show("Username already exists! Please choose another one.");
                 return;
+            }
             // here add the user in Persoane and verify its integrity
             if (!Person.Add_Persoana(firstName, lastName, email))
                 return;
             // here just add the user in User by the generated ID from Persoana
             int id_pers = Person.GetPersonID(firstName, lastName, email);
-            if (id_pers != -1 && ServiceUser.AddUser(username, password, id_pers))
-            {
+           
+            if (id_pers != -1 && ServiceUser.AddUser(username, password, id_pers) == true)
+            {              
                 MessageBox.Show("Registration successfully!");
                 SwitchToLogin();
+                return;
             }
+            // reached when the Person id is not found. An approximately impossible situation
+            Person.DeletePerson(firstName, lastName, email);
+            MessageBox.Show("Registration failed due to some reasons!");
         }
 
         public bool IsUsernameUnique(string username)
         {
-            if (!DB_Connect.IsDBConnected())
+            var context = new DataClasses1DataContext();
+            var user = context.Users.FirstOrDefault(p => p.username == username);
+            if (user != null) 
                 return false;
-            string query = "select count(*) from [User] where username=@username";
-            try
-            {
-                var cmd = new SqlCommand(query, DB_Connect.connect);
-                cmd.Parameters.AddWithValue("@username", username);
-                int count = cmd.ExecuteNonQuery();
-                if (count > 0) return false;
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show($"{e.Message} in IsUsernameUnique");
-            }
             return true;
         }
 

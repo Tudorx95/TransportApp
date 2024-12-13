@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
+        xmlns:components="clr-namespace:WpfApp.Components"
         mc:Ignorable="d"
         Title="StudentFacilities" Height="463" Width="530">
     <Grid Background="LightBlue" Margin="0,0,0,-6">
@@ -54,7 +55,7 @@
 
 
             <!-- Placeholder for an image -->
-            <Image Source="C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WpfApp\WpfApp\Images\Home_Images\Student_Facilities_Background.jpg" 
+            <Image Source="{Binding Source={x:Static components:Resource.Student_Facilities}}" 
                    Width="300" 
                    Height="200" 
                    HorizontalAlignment="Center" 

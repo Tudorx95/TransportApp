@@ -27,6 +27,7 @@ namespace WpfApp
        {
            InitializeComponent();
             this.Loaded += Home_Loaded;
+
         }
         private void Home_Loaded(object sender, RoutedEventArgs e)
         {

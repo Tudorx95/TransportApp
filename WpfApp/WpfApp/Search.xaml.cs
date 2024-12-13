@@ -5,6 +5,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
+using WpfApp.Components;
 
 namespace WpfApp
 {
@@ -29,11 +30,11 @@ namespace WpfApp
                 {
                     // video paths
                     string videoPath = transportType.nume.Contains("Tramvai")
-                        ? $"C:\\Users\\razva\\Desktop\\ABDApp\\TransportApp\\WpfApp\\WpfApp\\Images\\tram_video.mp4"
+                        ? Resource.tram_video
                         : transportType.nume.Contains("Autobuz")
-                        ? $"C:\\Users\\razva\\Desktop\\ABDApp\\TransportApp\\WpfApp\\WpfApp\\Images\\bus_video.mp4"
+                        ? Resource.bus_video
                         : transportType.nume.Contains("Metro")
-                        ? $"C:\\Users\\razva\\Desktop\\ABDApp\\TransportApp\\WpfApp\\WpfApp\\Images\\metro_video.mp4"
+                        ? Resource.metro_video
                         : null; 
 
                     if (videoPath != null)
@@ -62,13 +63,13 @@ namespace WpfApp
                 //dictionar pt toate imaginile cu rute
                 var imageMappings = new Dictionary<int, string>
                 {
-                    { 101, "Images/Maps/autobuz101.png" },
-                    { 102, "Images/Maps/autobuz102.png" },
-                    { 103, "Images/Maps/autobuz103.png" },
-                    { 10, "Images/Maps/tramvai10.png" },
-                    { 11, "Images/Maps/tramvai11.png" },
-                    { 12, "Images/Maps/tramvai12.png" },
-                    { 1, "Images/Maps/metrou1.png" }
+                    { 101, Resource.autouz101 },
+                    { 102, Resource.autobuz102 },
+                    { 103, Resource.autobuz103 },
+                    { 10, Resource.tramvai10 },
+                    { 11, Resource.tramvai11 },
+                    { 12, Resource.tramvai12 },
+                    { 1, Resource.metrou1 }
                 };
 
                 //load tip transport + numar mijloc de transport

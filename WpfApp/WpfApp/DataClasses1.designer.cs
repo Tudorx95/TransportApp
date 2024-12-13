@@ -75,7 +75,7 @@ namespace WpfApp
     #endregion
 		
 		public DataClasses1DataContext() : 
-				base(global::WpfApp.Properties.Settings.Default.TransportDBConnectionString, mappingSource)
+				base(global::WpfApp.Properties.Settings.Default.TransportDBConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -723,7 +723,8 @@ namespace WpfApp
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
-	}
+
+    }
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Complaint")]
 	public partial class Complaint : INotifyPropertyChanging, INotifyPropertyChanged

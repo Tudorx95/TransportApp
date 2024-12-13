@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+using WpfApp.Components;
 
 namespace WpfApp
 {
@@ -23,13 +25,17 @@ namespace WpfApp
         public VideoPlayerControl()
         {
             InitializeComponent();
-            videoPlayer.MediaEnded += VideoPlayer_MediaEnded;
-            //videoPlayer.MediaFailed += VideoPlayer_MediaFailed;
-            //videoPlayer.MediaOpened += VideoPlayer_MediaOpened;
+            string fullPath = Resource.PWD(Resource3.PublicTransport_mp4);
+
+            videoPlayer.Source = new Uri(fullPath, UriKind.RelativeOrAbsolute);
+            
+            videoPlayer.Play();
         }
         private void VideoPlayer_MediaEnded(object sender, RoutedEventArgs e)
         {
             // Restart the video from the beginning
+            string fullVideoPath=Resource.PWD(Resource3.PublicTransport_mp4);
+            videoPlayer.Source = new Uri(fullVideoPath, UriKind.RelativeOrAbsolute);
             videoPlayer.Position = TimeSpan.Zero;
             videoPlayer.Play();
         }

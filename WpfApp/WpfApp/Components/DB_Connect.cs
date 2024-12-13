@@ -25,27 +25,9 @@ namespace WpfApp.Components
         {
             var connection = new SqlConnection();
             connection.ConnectionString =
-            $"Server=LAPTOP-6U3DKNPP\\SQLEXPRESS;Database=TransportDB;Trusted_Connection=true";
+            $"Server={ip};Database={db_name};Trusted_Connection=true";
             connection.Open();
             return connection;
-        }
-        static public DataTable GetTableByName(string tableName)
-        {
-            if (connect == null)
-                throw new InvalidOperationException("Database connection is not initialized.");
-
-         
-            // Create a new SqlCommand and SqlDataAdapter to retrieve the table data
-            var query = $"SELECT * FROM [{tableName}]";
-            var cmd = new SqlCommand(query, connect);
-            var adapter = new SqlDataAdapter(cmd);
-            var dataTable = new DataTable(tableName);
-
-            // Fill the DataTable with the result
-            adapter.Fill(dataTable);
-
-         
-            return dataTable;
         }
 
         static public bool IsDBConnected()

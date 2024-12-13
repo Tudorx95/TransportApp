@@ -33,5 +33,17 @@ namespace WpfApp.Properties {
                 return ((string)(this["TransportDBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-LT\\SQLEXPRESS;Initial Catalog=TransportDB;Persist Security In" +
+            "fo=True;User ID=TransportApp;Password=foo;Encrypt=True;TrustServerCertificate=Tr" +
+            "ue")]
+        public string TransportDBConnectionString1 {
+            get {
+                return ((string)(this["TransportDBConnectionString1"]));
+            }
+        }
     }
 }

@@ -18,7 +18,7 @@ namespace WpfApp.Components
         public double total_Price;
         public Ticket()
         {
-
+            
         }
         public Ticket(int count,double price, Ticket_Option option, DateTime date) 
         { 
@@ -55,49 +55,32 @@ namespace WpfApp.Components
 
         static int Determine_Ticket_ID(Ticket_Option ticket_name)
         {
-            if (!DB_Connect.IsDBConnected())
-                return -1;
-            string query = "SELECT id_unic, nume FROM Tip_Bilet";
-            using (SqlCommand cmd = new SqlCommand(query,DB_Connect.connect))
-            {
-                using (SqlDataReader reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        // Retrieve the values of the columns
-                        int idUnic = reader.GetInt32(0); // Get id_unic (first column)
-                        string nume = reader.GetString(1); // Get nume (second column)
+            var context = new DataClasses1DataContext();  // Replace with your actual DataContext name
 
-                        // Compare with your string
-                        if (ticket_name.Equals(Ticket_Option.Single_Ticket) && 
-                            nume.Equals("Bilet o calatorie", StringComparison.OrdinalIgnoreCase))
-                        {
-                            return idUnic;
-                        }
-                        if (ticket_name.Equals(Ticket_Option.Round_Trip_Ticket) &&
-                           nume.Equals("Bilet dus-intors", StringComparison.OrdinalIgnoreCase))
-                        {
-                            return idUnic;
-                        }
-                        if (ticket_name.Equals(Ticket_Option.Monthly_Subscription) &&
-                           nume.Equals("Abonament lunar", StringComparison.OrdinalIgnoreCase))
-                        {
-                            return idUnic;
-                        }
-                        if (ticket_name.Equals(Ticket_Option.Half_Year_Subsc) &&
-                           nume.Equals("Abonament 6 luni", StringComparison.OrdinalIgnoreCase))
-                        {
-                            return idUnic;
-                        }
-                        if (ticket_name.Equals(Ticket_Option.Year_Subscription) &&
-                           nume.Equals("Abonament 1 an", StringComparison.OrdinalIgnoreCase))
-                        {
-                            return idUnic;
-                        }
-                    }
+            try
+            {
+                // Use LINQ to get the ticket matching the criteria
+                var ticket = context.Tip_Bilets
+                                    .Where(t =>
+                                           (ticket_name.Equals(Ticket_Option.Single_Ticket) && t.nume.ToLower() == "bilet o calatorie".ToLower()) ||
+                                           (ticket_name.Equals(Ticket_Option.Round_Trip_Ticket) && t.nume.ToLower() == "bilet dus-intors".ToLower()) ||
+                                           (ticket_name.Equals(Ticket_Option.Monthly_Subscription) && t.nume.ToLower() == "abonament lunar".ToLower()) ||
+                                           (ticket_name.Equals(Ticket_Option.Half_Year_Subsc) && t.nume.ToLower() == "abonament 6 luni".ToLower()) ||
+                                           (ticket_name.Equals(Ticket_Option.Year_Subscription) && t.nume.ToLower() == "abonament 1 an".ToLower())
+                                    )
+                                    .FirstOrDefault();  // Get the first matching ticket or null if no match found
+
+                if (ticket != null)
+                {
+                    return ticket.id_unic;  // Return the id_unic if a matching ticket is found
                 }
             }
-            return -1;
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+
+            return -1;  
         }
         public void AddTicket()
         {
@@ -116,28 +99,33 @@ namespace WpfApp.Components
                 return;
             }
 
-            string query = "INSERT INTO Bilet (tip_bilet, valabilitate, id_calator, nr_bilete) " +
-                     "VALUES (@tip_bilet, @valabilitate, @id_calator, @nr_bilete)";
-            if (!DB_Connect.IsDBConnected())
-                return;
+
+            var context = new DataClasses1DataContext();  // Replace with your actual DataContext name
+    
+         
             try
             {
-                using (SqlCommand cmd = new SqlCommand(query, DB_Connect.connect))
+                // Create a new Bilet entity
+                var newTicket = new Bilet
                 {
-                    // Set parameters to avoid SQL injection
-                    cmd.Parameters.AddWithValue("@tip_bilet", id_ticket);
-                    string formattedDate = ticket_date.ToString("yyyy-MM-dd");
-                    cmd.Parameters.AddWithValue("@valabilitate", formattedDate);
-                    cmd.Parameters.AddWithValue("@id_calator", id_user);
-                    cmd.Parameters.AddWithValue("@nr_bilete", ticket_count); // Assuming ticket_count is the number of tickets to insert
+                    tip_bilet = id_ticket,  // Use the determined ticket ID
+                    valabilitate = ticket_date.Date,  // Format the date as needed
+                    id_calator = id_user,  // User ID
+                    nr_bilete = ticket_count  // Number of tickets
+                };
 
-                    // Execute the command
-                    cmd.ExecuteNonQuery();
-                }
+                // Add the new ticket to the context
+                context.Bilets.InsertOnSubmit(newTicket);
+
+                // Submit changes to the database
+                context.SubmitChanges();
+
+                // Show success message
                 MessageBox.Show("Ticket successfully added.");
             }
             catch (Exception ex)
             {
+                // Handle any exceptions that may occur during insertion
                 MessageBox.Show($"Error while adding the ticket: {ex.Message}");
             }
         }

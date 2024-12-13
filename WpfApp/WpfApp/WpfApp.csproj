@@ -69,6 +69,17 @@
       <DependentUpon>Complains_Request.xaml</DependentUpon>
     </Compile>
     <Compile Include="Components\DB_Connect.cs" />
+    <Compile Include="Components\Resource.cs" />
+    <Compile Include="Components\Resource3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource3.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Resource4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource4.resx</DependentUpon>
+    </Compile>
     <Compile Include="Components\ServiceUser.cs" />
     <Compile Include="DataClasses1.designer.cs">
       <AutoGen>True</AutoGen>
@@ -80,6 +91,16 @@
     </Compile>
     <Compile Include="Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Resource2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource2.resx</DependentUpon>
     </Compile>
     <Compile Include="Search.xaml.cs">
       <DependentUpon>Search.xaml</DependentUpon>
@@ -116,16 +137,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Components\Crypt.cs" />
-    <Compile Include="Components\Employee.cs" />
-    <Compile Include="Components\LoginView.cs" />
     <Compile Include="Components\MTC.cs" />
-    <Compile Include="Components\MTCs\Bus.cs" />
-    <Compile Include="Components\MTCs\Subway.cs" />
-    <Compile Include="Components\MTCs\Tram.cs" />
     <Compile Include="Components\Person.cs" />
-    <Compile Include="Components\Route.cs" />
-    <Compile Include="Components\SearchTransportView.cs" />
     <Compile Include="Components\Ticket.cs" />
     <Compile Include="Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
@@ -187,9 +200,25 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Components\Resource3.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource3.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Resource4.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource4.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Resource2.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource2.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="DataClasses1.dbml">
