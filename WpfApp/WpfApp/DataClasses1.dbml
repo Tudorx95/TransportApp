@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TransportDB" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-6U3DKNPP\SQLEXPRESS;Initial Catalog=TransportDB;Integrated Security=True;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="WpfApp.Properties.Settings" SettingsPropertyName="TransportDBConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-LT\SQLEXPRESS;Initial Catalog=TransportDB;Persist Security Info=True;User ID=TransportApp;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="WpfApp.Properties.Settings" SettingsPropertyName="TransportDBConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Angajat" Member="Angajats">
     <Type Name="Angajat">
       <Column Name="id_unic" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -19,8 +19,8 @@
       <Column Name="valabilitate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="id_calator" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="nr_bilete" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="Tip_Bilet_Bilet" Member="Tip_Bilet1" ThisKey="tip_bilet" OtherKey="id_unic" Type="Tip_Bilet" IsForeignKey="true" />
       <Association Name="User_Bilet" Member="User" ThisKey="id_calator" OtherKey="id_unic" Type="User" IsForeignKey="true" />
+      <Association Name="Tip_Bilet_Bilet" Member="Tip_Bilet1" ThisKey="tip_bilet" OtherKey="id_unic" Type="Tip_Bilet" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Complaint" Member="Complaints">
@@ -86,13 +86,6 @@
       <Association Name="Tip_Angajat_Angajat" Member="Angajats" ThisKey="id_unic" OtherKey="tip_angajat" Type="Angajat" />
     </Type>
   </Table>
-  <Table Name="dbo.Tip_Bilet" Member="Tip_Bilets">
-    <Type Name="Tip_Bilet">
-      <Column Name="id_unic" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="nume" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-      <Association Name="Tip_Bilet_Bilet" Member="Bilets" ThisKey="id_unic" OtherKey="tip_bilet" Type="Bilet" />
-    </Type>
-  </Table>
   <Table Name="dbo.Tip_Statie" Member="Tip_Staties">
     <Type Name="Tip_Statie">
       <Column Name="id_unic" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -133,6 +126,13 @@
       <Association Name="User_Bilet" Member="Bilets" ThisKey="id_unic" OtherKey="id_calator" Type="Bilet" />
       <Association Name="User_Complaint" Member="Complaints" ThisKey="id_unic" OtherKey="id_user" Type="Complaint" />
       <Association Name="Persoana_User" Member="Persoana" ThisKey="id_persoana" OtherKey="id_unic" Type="Persoana" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tip_Bilet" Member="Tip_Bilets">
+    <Type Name="Tip_Bilet">
+      <Column Name="id_unic" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nume" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="Tip_Bilet_Bilet" Member="Bilets" ThisKey="id_unic" OtherKey="tip_bilet" Type="Bilet" />
     </Type>
   </Table>
 </Database>

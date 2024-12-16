@@ -54,9 +54,6 @@ namespace WpfApp
     partial void InsertTip_Angajat(Tip_Angajat instance);
     partial void UpdateTip_Angajat(Tip_Angajat instance);
     partial void DeleteTip_Angajat(Tip_Angajat instance);
-    partial void InsertTip_Bilet(Tip_Bilet instance);
-    partial void UpdateTip_Bilet(Tip_Bilet instance);
-    partial void DeleteTip_Bilet(Tip_Bilet instance);
     partial void InsertTip_Statie(Tip_Statie instance);
     partial void UpdateTip_Statie(Tip_Statie instance);
     partial void DeleteTip_Statie(Tip_Statie instance);
@@ -72,10 +69,13 @@ namespace WpfApp
     partial void InsertUser(User instance);
     partial void UpdateUser(User instance);
     partial void DeleteUser(User instance);
+    partial void InsertTip_Bilet(Tip_Bilet instance);
+    partial void UpdateTip_Bilet(Tip_Bilet instance);
+    partial void DeleteTip_Bilet(Tip_Bilet instance);
     #endregion
 		
 		public DataClasses1DataContext() : 
-				base(global::WpfApp.Properties.Settings.Default.TransportDBConnectionString, mappingSource)
+				base(global::WpfApp.Properties.Settings.Default.TransportDBConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -168,14 +168,6 @@ namespace WpfApp
 			}
 		}
 		
-		public System.Data.Linq.Table<Tip_Bilet> Tip_Bilets
-		{
-			get
-			{
-				return this.GetTable<Tip_Bilet>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Tip_Statie> Tip_Staties
 		{
 			get
@@ -213,6 +205,14 @@ namespace WpfApp
 			get
 			{
 				return this.GetTable<User>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Tip_Bilet> Tip_Bilets
+		{
+			get
+			{
+				return this.GetTable<Tip_Bilet>();
 			}
 		}
 	}
@@ -501,9 +501,9 @@ namespace WpfApp
 		
 		private int _nr_bilete;
 		
-		private EntityRef<Tip_Bilet> _Tip_Bilet1;
-		
 		private EntityRef<User> _User;
+		
+		private EntityRef<Tip_Bilet> _Tip_Bilet1;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -523,8 +523,8 @@ namespace WpfApp
 		
 		public Bilet()
 		{
-			this._Tip_Bilet1 = default(EntityRef<Tip_Bilet>);
 			this._User = default(EntityRef<User>);
+			this._Tip_Bilet1 = default(EntityRef<Tip_Bilet>);
 			OnCreated();
 		}
 		
@@ -636,40 +636,6 @@ namespace WpfApp
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tip_Bilet_Bilet", Storage="_Tip_Bilet1", ThisKey="tip_bilet", OtherKey="id_unic", IsForeignKey=true)]
-		public Tip_Bilet Tip_Bilet1
-		{
-			get
-			{
-				return this._Tip_Bilet1.Entity;
-			}
-			set
-			{
-				Tip_Bilet previousValue = this._Tip_Bilet1.Entity;
-				if (((previousValue != value) 
-							|| (this._Tip_Bilet1.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Tip_Bilet1.Entity = null;
-						previousValue.Bilets.Remove(this);
-					}
-					this._Tip_Bilet1.Entity = value;
-					if ((value != null))
-					{
-						value.Bilets.Add(this);
-						this._tip_bilet = value.id_unic;
-					}
-					else
-					{
-						this._tip_bilet = default(int);
-					}
-					this.SendPropertyChanged("Tip_Bilet1");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="User_Bilet", Storage="_User", ThisKey="id_calator", OtherKey="id_unic", IsForeignKey=true)]
 		public User User
 		{
@@ -700,6 +666,40 @@ namespace WpfApp
 						this._id_calator = default(int);
 					}
 					this.SendPropertyChanged("User");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tip_Bilet_Bilet", Storage="_Tip_Bilet1", ThisKey="tip_bilet", OtherKey="id_unic", IsForeignKey=true)]
+		public Tip_Bilet Tip_Bilet1
+		{
+			get
+			{
+				return this._Tip_Bilet1.Entity;
+			}
+			set
+			{
+				Tip_Bilet previousValue = this._Tip_Bilet1.Entity;
+				if (((previousValue != value) 
+							|| (this._Tip_Bilet1.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Tip_Bilet1.Entity = null;
+						previousValue.Bilets.Remove(this);
+					}
+					this._Tip_Bilet1.Entity = value;
+					if ((value != null))
+					{
+						value.Bilets.Add(this);
+						this._tip_bilet = value.id_unic;
+					}
+					else
+					{
+						this._tip_bilet = default(int);
+					}
+					this.SendPropertyChanged("Tip_Bilet1");
 				}
 			}
 		}
@@ -2054,120 +2054,6 @@ namespace WpfApp
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Tip_Bilet")]
-	public partial class Tip_Bilet : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _id_unic;
-		
-		private string _nume;
-		
-		private EntitySet<Bilet> _Bilets;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onid_unicChanging(int value);
-    partial void Onid_unicChanged();
-    partial void OnnumeChanging(string value);
-    partial void OnnumeChanged();
-    #endregion
-		
-		public Tip_Bilet()
-		{
-			this._Bilets = new EntitySet<Bilet>(new Action<Bilet>(this.attach_Bilets), new Action<Bilet>(this.detach_Bilets));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_unic", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int id_unic
-		{
-			get
-			{
-				return this._id_unic;
-			}
-			set
-			{
-				if ((this._id_unic != value))
-				{
-					this.Onid_unicChanging(value);
-					this.SendPropertyChanging();
-					this._id_unic = value;
-					this.SendPropertyChanged("id_unic");
-					this.Onid_unicChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nume", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
-		public string nume
-		{
-			get
-			{
-				return this._nume;
-			}
-			set
-			{
-				if ((this._nume != value))
-				{
-					this.OnnumeChanging(value);
-					this.SendPropertyChanging();
-					this._nume = value;
-					this.SendPropertyChanged("nume");
-					this.OnnumeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tip_Bilet_Bilet", Storage="_Bilets", ThisKey="id_unic", OtherKey="tip_bilet")]
-		public EntitySet<Bilet> Bilets
-		{
-			get
-			{
-				return this._Bilets;
-			}
-			set
-			{
-				this._Bilets.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Bilets(Bilet entity)
-		{
-			this.SendPropertyChanging();
-			entity.Tip_Bilet1 = this;
-		}
-		
-		private void detach_Bilets(Bilet entity)
-		{
-			this.SendPropertyChanging();
-			entity.Tip_Bilet1 = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Tip_Statie")]
 	public partial class Tip_Statie : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -2936,6 +2822,120 @@ namespace WpfApp
 		{
 			this.SendPropertyChanging();
 			entity.User = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Tip_Bilet")]
+	public partial class Tip_Bilet : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id_unic;
+		
+		private string _nume;
+		
+		private EntitySet<Bilet> _Bilets;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Onid_unicChanging(int value);
+    partial void Onid_unicChanged();
+    partial void OnnumeChanging(string value);
+    partial void OnnumeChanged();
+    #endregion
+		
+		public Tip_Bilet()
+		{
+			this._Bilets = new EntitySet<Bilet>(new Action<Bilet>(this.attach_Bilets), new Action<Bilet>(this.detach_Bilets));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_unic", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id_unic
+		{
+			get
+			{
+				return this._id_unic;
+			}
+			set
+			{
+				if ((this._id_unic != value))
+				{
+					this.Onid_unicChanging(value);
+					this.SendPropertyChanging();
+					this._id_unic = value;
+					this.SendPropertyChanged("id_unic");
+					this.Onid_unicChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nume", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string nume
+		{
+			get
+			{
+				return this._nume;
+			}
+			set
+			{
+				if ((this._nume != value))
+				{
+					this.OnnumeChanging(value);
+					this.SendPropertyChanging();
+					this._nume = value;
+					this.SendPropertyChanged("nume");
+					this.OnnumeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tip_Bilet_Bilet", Storage="_Bilets", ThisKey="id_unic", OtherKey="tip_bilet")]
+		public EntitySet<Bilet> Bilets
+		{
+			get
+			{
+				return this._Bilets;
+			}
+			set
+			{
+				this._Bilets.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Bilets(Bilet entity)
+		{
+			this.SendPropertyChanging();
+			entity.Tip_Bilet1 = this;
+		}
+		
+		private void detach_Bilets(Bilet entity)
+		{
+			this.SendPropertyChanging();
+			entity.Tip_Bilet1 = null;
 		}
 	}
 }
