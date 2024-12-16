@@ -126,9 +126,7 @@ namespace WpfApp
                 message += $"{item.Station.Name} - Distance: {item.Distance:F2} km\n";
             }
 
-            message += "\nDo you want to select this location?";
-
-            MessageBoxResult result = MessageBox.Show(message, "Confirm Location", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            MessageBoxResult result = MessageBox.Show(message, "Confirm Location", MessageBoxButton.OK, MessageBoxImage.Question);
 
         }
 

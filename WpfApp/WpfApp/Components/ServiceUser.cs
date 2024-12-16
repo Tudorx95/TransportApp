@@ -35,13 +35,14 @@ namespace WpfApp.Components
             var context = new DataClasses1DataContext();
             var user = new User
             {
-                username=username,
-                password=password,
-                id_persoana=id_pers
+                username = username,
+                password = password,
+                id_persoana = id_pers
             };
             try
             {
                 context.Users.InsertOnSubmit(user);
+                context.SubmitChanges(); // ai uitat sa o pui 
                 return true;
             }
             catch (Exception ex)
@@ -52,7 +53,7 @@ namespace WpfApp.Components
         }
         static public bool Exist_User(string username, string password)
         {
-            var context =new DataClasses1DataContext();
+            var context = new DataClasses1DataContext();
             var user_username = context.Users.FirstOrDefault(p => p.username==username);
             var user_passwd = context.Users.FirstOrDefault(p => p.password==password);
             var user = context.Users.FirstOrDefault(p => p.username==username && p.password==password);

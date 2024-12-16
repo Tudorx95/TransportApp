@@ -25,7 +25,7 @@ namespace WpfApp.Components
         {
             var connection = new SqlConnection();
             connection.ConnectionString =
-            $"Server={ip};Database={db_name};Trusted_Connection=true";
+            $"Server=LAPTOP-6U3DKNPP\\SQLEXPRESS;Database={db_name};Trusted_Connection=true";
             connection.Open();
             return connection;
         }

@@ -75,7 +75,7 @@ namespace WpfApp
     #endregion
 		
 		public DataClasses1DataContext() : 
-				base(global::WpfApp.Properties.Settings.Default.TransportDBConnectionString1, mappingSource)
+				base(global::WpfApp.Properties.Settings.Default.TransportDBConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -723,8 +723,7 @@ namespace WpfApp
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
-
-    }
+	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Complaint")]
 	public partial class Complaint : INotifyPropertyChanging, INotifyPropertyChanged
@@ -2751,7 +2750,7 @@ namespace WpfApp
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_unic", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_unic", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int id_unic
 		{
 			get

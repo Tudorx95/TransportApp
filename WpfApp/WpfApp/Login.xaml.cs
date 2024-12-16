@@ -55,6 +55,7 @@ namespace WpfApp
                 ServiceUser.LoginDetails = newLoginDetails;
                 NavigationBar.NavigateTo(typeof(Search));
             }
+            //NavigationBar.NavigateTo(typeof(Search)); --added by me
         }
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)

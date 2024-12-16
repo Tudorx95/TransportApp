@@ -120,3 +120,7 @@ C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WpfApp\WpfA
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WpfApp\WpfApp\obj\Debug\WpfApp.Components.Resource1.resources
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WpfApp\WpfApp\obj\Debug\WpfApp.Components.Resource2.resources
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WpfApp\WpfApp\obj\Debug\WpfApp.Components.Resource4.resources
+C:\Users\razva\Desktop\ABDApp\TransportApp\WpfApp\WpfApp\obj\Debug\WpfApp.Components.Resource3.resources
+C:\Users\razva\Desktop\ABDApp\TransportApp\WpfApp\WpfApp\obj\Debug\WpfApp.Components.Resource4.resources
+C:\Users\razva\Desktop\ABDApp\TransportApp\WpfApp\WpfApp\obj\Debug\WpfApp.Components.Resource1.resources
+C:\Users\razva\Desktop\ABDApp\TransportApp\WpfApp\WpfApp\obj\Debug\WpfApp.Components.Resource2.resources
