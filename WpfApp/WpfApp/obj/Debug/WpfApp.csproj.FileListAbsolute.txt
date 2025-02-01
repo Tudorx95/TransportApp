@@ -70,12 +70,12 @@ C:\Users\razva\Desktop\ABDApp\TransportApp\WpfApp\WpfApp\bin\Debug\WpfAnimatedGi
 C:\Users\razva\Desktop\ABDApp\TransportApp\WpfApp\WpfApp\bin\Debug\System.Device.Portable.dll
 C:\Users\razva\Desktop\ABDApp\TransportApp\WpfApp\WpfApp\obj\Debug\SearchRoute.g.cs
 C:\Users\razva\Desktop\ABDApp\TransportApp\WpfApp\WpfApp\obj\Debug\SearchRoute.baml
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WpfApp\WpfApp\bin\Debug\WpfApp.exe
 C:\Users\razva\Desktop\ABDApp\TransportApp\WpfApp\WpfApp\obj\Debug\WpfApp.Components.Resource3.resources
 C:\Users\razva\Desktop\ABDApp\TransportApp\WpfApp\WpfApp\obj\Debug\WpfApp.Components.Resource4.resources
 C:\Users\razva\Desktop\ABDApp\TransportApp\WpfApp\WpfApp\obj\Debug\WpfApp.Components.Resource1.resources
 C:\Users\razva\Desktop\ABDApp\TransportApp\WpfApp\WpfApp\obj\Debug\WpfApp.Components.Resource2.resources
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WpfApp\WpfApp\bin\Debug\WpfApp.exe.config
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WpfApp\WpfApp\bin\Debug\WpfApp.exe
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WpfApp\WpfApp\bin\Debug\WpfApp.pdb
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WpfApp\WpfApp\bin\Debug\System.Data.SqlClient.dll
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportApp\WpfApp\WpfApp\bin\Debug\System.Device.Portable.dll
